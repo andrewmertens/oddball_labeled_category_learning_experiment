@@ -2732,11 +2732,11 @@
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="instructionLearn2.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
+        <Param val="$chr(19)" valType="str" updates="None" name="startdata"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="len(_learning2_keyboard_allKeys)" valType="code" updates="constant" name="stopVal"/>
         <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
+        <Param val="$chr(19)" valType="str" updates="None" name="stopdata"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="" valType="int" updates="None" name="timeout"/>
       </SerialOutComponent>
@@ -4045,11 +4045,11 @@
         <Param val="COM4" valType="str" updates="None" name="port"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="resting_closed_photobox_pre.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val=".1" valType="code" updates="None" name="startVal"/>
         <Param val="$chr(1)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="resting_closed_photobox_pre.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="29.9" valType="code" updates="constant" name="stopVal"/>
         <Param val="1" valType="int" updates="None" name="stopbits"/>
         <Param val="$chr(2)" valType="str" updates="None" name="stopdata"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -4248,11 +4248,11 @@
         <Param val="COM4" valType="str" updates="None" name="port"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="resting_open_photobox_pre.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val=".1" valType="code" updates="None" name="startVal"/>
         <Param val="$chr(3)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="resting_open_photobox_pre.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="29.9" valType="code" updates="constant" name="stopVal"/>
         <Param val="1" valType="int" updates="None" name="stopbits"/>
         <Param val="$chr(4)" valType="str" updates="None" name="stopdata"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -4456,11 +4456,11 @@
         <Param val="COM4" valType="str" updates="None" name="port"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="resting_closed_photobox_post.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val=".1" valType="code" updates="None" name="startVal"/>
         <Param val="$chr(11)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="resting_closed_photobox_post.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="29.9" valType="code" updates="constant" name="stopVal"/>
         <Param val="1" valType="int" updates="None" name="stopbits"/>
         <Param val="$chr(12)" valType="str" updates="None" name="stopdata"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -4598,11 +4598,11 @@
         <Param val="COM4" valType="str" updates="None" name="port"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="resting_open_photobox_post.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val=".1" valType="code" updates="None" name="startVal"/>
         <Param val="$chr(13)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="resting_open_photobox_post.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="29.9" valType="code" updates="constant" name="stopVal"/>
         <Param val="1" valType="int" updates="None" name="stopbits"/>
         <Param val="$chr(14)" valType="str" updates="None" name="stopdata"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -4703,13 +4703,13 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <CodeComponent name="skip_learn1_break1_code" plugin="None">
+      <CodeComponent name="learn1_break1_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((learning1_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if learning1_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((learning1_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;learn1_break1_trig = (learning1_oddcond_loop.thisN + 15);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if learning1_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;&amp;#10;learn1_break1_trig = learning1_oddcond_loop.thisN + 15" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -4718,7 +4718,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="skip_learn1_break1_code" valType="code" updates="None" name="name"/>
+        <Param val="learn1_break1_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="learn1_break1_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
@@ -4775,13 +4775,13 @@
         <Param val="COM4" valType="str" updates="None" name="port"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="learn1_break1_text == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(15)" valType="str" updates="None" name="startdata"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val=".1" valType="code" updates="None" name="startVal"/>
+        <Param val="$chr(learn1_break1_trig)" valType="str" updates="None" name="startdata"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="len(_learn1_break1_keys_allKeys)" valType="code" updates="constant" name="stopVal"/>
         <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="" valType="str" updates="None" name="stopdata"/>
+        <Param val="$chr(learn1_break1_trig)" valType="str" updates="None" name="stopdata"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="" valType="int" updates="None" name="timeout"/>
       </SerialOutComponent>
@@ -4863,27 +4863,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn1_break2_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn1_break2_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="learn1_break2_text == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(16)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning2_break1">
       <RoutineSettingsComponent name="learning2_break1" plugin="None">
@@ -4906,8 +4885,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((learning2_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if learning2_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((learning2_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;learn2_break1_trig = (learning2_oddcond_loop.thisN + 20);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if learning2_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;    &amp;#10;learn2_break1_trig = learning2_oddcond_loop.thisN + 20" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -4973,13 +4952,13 @@
         <Param val="COM4" valType="str" updates="None" name="port"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="learn2_break1_text == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(17)" valType="str" updates="None" name="startdata"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val=".1" valType="code" updates="None" name="startVal"/>
+        <Param val="$chr(learn2_break1_trig)" valType="str" updates="None" name="startdata"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="len(_learn2_break1_keys_allKeys)" valType="code" updates="constant" name="stopVal"/>
         <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="" valType="str" updates="None" name="stopdata"/>
+        <Param val="$chr(learn2_break1_trig)" valType="str" updates="None" name="stopdata"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="" valType="int" updates="None" name="timeout"/>
       </SerialOutComponent>
@@ -5061,27 +5040,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learning2_break2_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learning2_break2_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="learn2_break2_text == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(18)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning2_break0">
       <RoutineSettingsComponent name="learning2_break0" plugin="None">
