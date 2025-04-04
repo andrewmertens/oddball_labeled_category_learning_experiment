@@ -1,4 +1,4 @@
-# Oddball Labeled Category Learning Oddball Experiment
+# Oddball Labeled Category Learning Experiment
 
 This is a visual oddball experiment implemented in Psychopy (Builder). The task consists of 800 trials, in each of which the participant views and classifies individual Gabor patch stimuli that vary on dimensions of orientation and spatial frequency, with eight values on each dimension, resulting in 64 unique stimuli. Participants are tasked with learning, with feedback, to classify each stimulus into one of two categories based on the orientation of Gabor patch stimuli. The primary experimental manipulation in this design is the inclusion of a labeling condition, in which participants receive redundant, verbal category labels as part of their training feedback.
 
