@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 03, 2025, at 10:38
+    on April 07, 2025, at 11:24
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -34,7 +34,7 @@ import sys  # to get file system encoding
 from psychopy.hardware import keyboard
 import serial
 
-# Run 'Before Experiment' code from stimSize_2
+# Run 'Before Experiment' code from stim_setup
 alienH = .4
 alienW = .2686
 
@@ -46,6 +46,7 @@ explW = .1
 textH = .04
 fixationH = .1
 
+alien_body_file = 'stimuli/alienBody6.png'
 # Create serial object for device at port 'COM4'
 serialCom4 = serial.Serial(
     port='COM4',
@@ -193,7 +194,7 @@ instructionLearn0 = visual.TextStim(win=win, name='instructionLearn0',
 alienBodyDemoLL = visual.ImageStim(
     win=win,
     name='alienBodyDemoLL', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(-.45, -.3), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -208,7 +209,7 @@ alienEyeDemoLL = visual.GratingStim(
 alienBodyDemoL = visual.ImageStim(
     win=win,
     name='alienBodyDemoL', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(-.15, -.3), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -223,7 +224,7 @@ alienEyeDemoL = visual.GratingStim(
 alienBodyDemoR = visual.ImageStim(
     win=win,
     name='alienBodyDemoR', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(.15, -.3), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -238,7 +239,7 @@ alienEyeDemoR = visual.GratingStim(
 alienBodyDemoRR = visual.ImageStim(
     win=win,
     name='alienBodyDemoRR', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(.45, -.3), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -274,7 +275,7 @@ elif expInfo['LC (experimenter use only)'] == 'NL':
     label_vol = 0
 
 if expInfo['LS (experimenter use only)'] == 'HL':
-    learning_sequence1 = 'conditions/oddhigh_conditions_test.xlsx'
+    learning_sequence1 = 'conditions/oddhigh_conditions.xlsx'
     learning_sequence2 = 'conditions/oddlow_conditions.xlsx'
 elif expInfo['LS (experimenter use only)'] == 'LH':
     learning_sequence1 = 'conditions/oddlow_conditions.xlsx'
@@ -283,7 +284,7 @@ elif expInfo['LS (experimenter use only)'] == 'LH':
 alienBodyDemo1 = visual.ImageStim(
     win=win,
     name='alienBodyDemo1', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(.45, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -322,7 +323,7 @@ if not learn_instruction_trigs_1.is_open:
 alienBodyDemo1_2 = visual.ImageStim(
     win=win,
     name='alienBodyDemo1_2', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(.45, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -489,7 +490,7 @@ learn_trialNum_2 = visual.TextStim(win=win, name='learn_trialNum_2',
 alienBodyLearn = visual.ImageStim(
     win=win,
     name='alienBodyLearn', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(0, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -550,7 +551,7 @@ learn_trialNum_3 = visual.TextStim(win=win, name='learn_trialNum_3',
 alienBodyLearn2 = visual.ImageStim(
     win=win,
     name='alienBodyLearn2', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(0, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -591,7 +592,7 @@ learn_trialNum_4 = visual.TextStim(win=win, name='learn_trialNum_4',
 alienBodyLearn3 = visual.ImageStim(
     win=win,
     name='alienBodyLearn3', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(0, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -620,36 +621,13 @@ learn_trialNum_5 = visual.TextStim(win=win, name='learn_trialNum_5',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
-alienBodyLearn4 = visual.ImageStim(
-    win=win,
-    name='alienBodyLearn4', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0), size=[alienW, alienH],
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
-alienEyeLearn4 = visual.GratingStim(
-    win=win, name='alienEyeLearn4',
-    tex='sin', mask='gauss', anchor='center',
-    ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
-    color=[1,1,1], colorSpace='rgb',
-    opacity=None, contrast=0.5, blendmode='avg',
-    texRes=128.0, interpolate=True, depth=-2.0)
-explorerLearn4 = visual.ImageStim(
-    win=win,
-    name='explorerLearn4', 
-    image='stimuli/spaceExplorer2.png', mask=None, anchor='center',
-    ori=0.0, pos=[0,0], size=[explW, explH],
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
 learning_blink_text = visual.TextStim(win=win, name='learning_blink_text',
-    text='You can blink now! Press the spacebar to continue.',
+    text='You can blink now!\nPress the spacebar to continue.',
     font='Open Sans',
-    units='height', pos=(0, -.35), height=textH, wrapWidth=None, ori=0.0, 
+    units='height', pos=(0, .1), height=textH, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-1.0);
 learning_blink_key = keyboard.Keyboard()
 
 # point learn_blink_trigs to device at port 'COM4' and make sure it's open
@@ -688,7 +666,7 @@ learn1_break2_keys = keyboard.Keyboard()
 alienBodyDemo2 = visual.ImageStim(
     win=win,
     name='alienBodyDemo2', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(.45, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -766,7 +744,7 @@ learn_trialNum_2 = visual.TextStim(win=win, name='learn_trialNum_2',
 alienBodyLearn = visual.ImageStim(
     win=win,
     name='alienBodyLearn', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(0, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -827,7 +805,7 @@ learn_trialNum_3 = visual.TextStim(win=win, name='learn_trialNum_3',
 alienBodyLearn2 = visual.ImageStim(
     win=win,
     name='alienBodyLearn2', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(0, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -868,7 +846,7 @@ learn_trialNum_4 = visual.TextStim(win=win, name='learn_trialNum_4',
 alienBodyLearn3 = visual.ImageStim(
     win=win,
     name='alienBodyLearn3', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
+    image=alien_body_file, mask=None, anchor='center',
     ori=0.0, pos=(0, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -897,36 +875,13 @@ learn_trialNum_5 = visual.TextStim(win=win, name='learn_trialNum_5',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
-alienBodyLearn4 = visual.ImageStim(
-    win=win,
-    name='alienBodyLearn4', 
-    image='stimuli/alienBody5.png', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0), size=[alienW, alienH],
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
-alienEyeLearn4 = visual.GratingStim(
-    win=win, name='alienEyeLearn4',
-    tex='sin', mask='gauss', anchor='center',
-    ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
-    color=[1,1,1], colorSpace='rgb',
-    opacity=None, contrast=0.5, blendmode='avg',
-    texRes=128.0, interpolate=True, depth=-2.0)
-explorerLearn4 = visual.ImageStim(
-    win=win,
-    name='explorerLearn4', 
-    image='stimuli/spaceExplorer2.png', mask=None, anchor='center',
-    ori=0.0, pos=[0,0], size=[explW, explH],
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
 learning_blink_text = visual.TextStim(win=win, name='learning_blink_text',
-    text='You can blink now! Press the spacebar to continue.',
+    text='You can blink now!\nPress the spacebar to continue.',
     font='Open Sans',
-    units='height', pos=(0, -.35), height=textH, wrapWidth=None, ori=0.0, 
+    units='height', pos=(0, .1), height=textH, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-1.0);
 learning_blink_key = keyboard.Keyboard()
 
 # point learn_blink_trigs to device at port 'COM4' and make sure it's open
@@ -4069,14 +4024,11 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         continueRoutine = True
         # update component parameters for each repeat
         learn_trialNum_5.setText(learn_trial_nums)
-        alienEyeLearn4.setOri(learn_ori_val)
-        alienEyeLearn4.setSF(learn_freq_val)
-        explorerLearn4.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
         learning_blink_key.keys = []
         learning_blink_key.rt = []
         _learning_blink_key_allKeys = []
         # keep track of which components have finished
-        learning_blinkComponents = [learn_trialNum_5, alienBodyLearn4, alienEyeLearn4, explorerLearn4, learning_blink_text, learning_blink_key, learn_blink_trigs]
+        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs]
         for thisComponent in learning_blinkComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -4116,66 +4068,6 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             
             # if learn_trialNum_5 is active this frame...
             if learn_trialNum_5.status == STARTED:
-                # update params
-                pass
-            
-            # *alienBodyLearn4* updates
-            
-            # if alienBodyLearn4 is starting this frame...
-            if alienBodyLearn4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                alienBodyLearn4.frameNStart = frameN  # exact frame index
-                alienBodyLearn4.tStart = t  # local t and not account for scr refresh
-                alienBodyLearn4.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(alienBodyLearn4, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'alienBodyLearn4.started')
-                # update status
-                alienBodyLearn4.status = STARTED
-                alienBodyLearn4.setAutoDraw(True)
-            
-            # if alienBodyLearn4 is active this frame...
-            if alienBodyLearn4.status == STARTED:
-                # update params
-                pass
-            
-            # *alienEyeLearn4* updates
-            
-            # if alienEyeLearn4 is starting this frame...
-            if alienEyeLearn4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                alienEyeLearn4.frameNStart = frameN  # exact frame index
-                alienEyeLearn4.tStart = t  # local t and not account for scr refresh
-                alienEyeLearn4.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(alienEyeLearn4, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'alienEyeLearn4.started')
-                # update status
-                alienEyeLearn4.status = STARTED
-                alienEyeLearn4.setAutoDraw(True)
-            
-            # if alienEyeLearn4 is active this frame...
-            if alienEyeLearn4.status == STARTED:
-                # update params
-                pass
-            
-            # *explorerLearn4* updates
-            
-            # if explorerLearn4 is starting this frame...
-            if explorerLearn4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                explorerLearn4.frameNStart = frameN  # exact frame index
-                explorerLearn4.tStart = t  # local t and not account for scr refresh
-                explorerLearn4.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(explorerLearn4, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'explorerLearn4.started')
-                # update status
-                explorerLearn4.status = STARTED
-                explorerLearn4.setAutoDraw(True)
-            
-            # if explorerLearn4 is active this frame...
-            if explorerLearn4.status == STARTED:
                 # update params
                 pass
             
@@ -5810,14 +5702,11 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         continueRoutine = True
         # update component parameters for each repeat
         learn_trialNum_5.setText(learn_trial_nums)
-        alienEyeLearn4.setOri(learn_ori_val)
-        alienEyeLearn4.setSF(learn_freq_val)
-        explorerLearn4.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
         learning_blink_key.keys = []
         learning_blink_key.rt = []
         _learning_blink_key_allKeys = []
         # keep track of which components have finished
-        learning_blinkComponents = [learn_trialNum_5, alienBodyLearn4, alienEyeLearn4, explorerLearn4, learning_blink_text, learning_blink_key, learn_blink_trigs]
+        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs]
         for thisComponent in learning_blinkComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -5857,66 +5746,6 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             
             # if learn_trialNum_5 is active this frame...
             if learn_trialNum_5.status == STARTED:
-                # update params
-                pass
-            
-            # *alienBodyLearn4* updates
-            
-            # if alienBodyLearn4 is starting this frame...
-            if alienBodyLearn4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                alienBodyLearn4.frameNStart = frameN  # exact frame index
-                alienBodyLearn4.tStart = t  # local t and not account for scr refresh
-                alienBodyLearn4.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(alienBodyLearn4, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'alienBodyLearn4.started')
-                # update status
-                alienBodyLearn4.status = STARTED
-                alienBodyLearn4.setAutoDraw(True)
-            
-            # if alienBodyLearn4 is active this frame...
-            if alienBodyLearn4.status == STARTED:
-                # update params
-                pass
-            
-            # *alienEyeLearn4* updates
-            
-            # if alienEyeLearn4 is starting this frame...
-            if alienEyeLearn4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                alienEyeLearn4.frameNStart = frameN  # exact frame index
-                alienEyeLearn4.tStart = t  # local t and not account for scr refresh
-                alienEyeLearn4.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(alienEyeLearn4, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'alienEyeLearn4.started')
-                # update status
-                alienEyeLearn4.status = STARTED
-                alienEyeLearn4.setAutoDraw(True)
-            
-            # if alienEyeLearn4 is active this frame...
-            if alienEyeLearn4.status == STARTED:
-                # update params
-                pass
-            
-            # *explorerLearn4* updates
-            
-            # if explorerLearn4 is starting this frame...
-            if explorerLearn4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                explorerLearn4.frameNStart = frameN  # exact frame index
-                explorerLearn4.tStart = t  # local t and not account for scr refresh
-                explorerLearn4.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(explorerLearn4, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'explorerLearn4.started')
-                # update status
-                explorerLearn4.status = STARTED
-                explorerLearn4.setAutoDraw(True)
-            
-            # if explorerLearn4 is active this frame...
-            if explorerLearn4.status == STARTED:
                 # update params
                 pass
             
@@ -6036,7 +5865,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
     if learning2_oddcond_loop.nRemaining == 0:
         continueRoutine=False
         
-    learn2_break1_trig = learning1_oddcond_loop.thisN + 20
+    learn2_break1_trig = learning2_oddcond_loop.thisN + 20
     learning2_break1_keys.keys = []
     learning2_break1_keys.rt = []
     _learning2_break1_keys_allKeys = []
