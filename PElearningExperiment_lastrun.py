@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 08, 2025, at 10:25
+    on April 08, 2025, at 13:27
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -47,6 +47,10 @@ textH = .04
 fixationH = .1
 
 alien_body_file = 'stimuli/alienBody6.png'
+
+full_health_score = 20 #starting hp
+health_score = full_health_score
+health_modifier = 1 #starting modifier (full health)
 # Create serial object for device at port 'COM4'
 serialCom4 = serial.Serial(
     port='COM4',
@@ -478,6 +482,18 @@ learn_fix_trigs = serialCom4
 learn_fix_trigs.status = NOT_STARTED
 if not learn_fix_trigs.is_open:
     learn_fix_trigs.open()
+health_border_1 = visual.Rect(
+    win=win, name='health_border_1',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-4.0, interpolate=True)
+health_fill_1 = visual.Rect(
+    win=win, name='health_fill_1',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-5.0, interpolate=True)
 
 # --- Initialize components for Routine "learning_presentation" ---
 learn_trialNum_2 = visual.TextStim(win=win, name='learn_trialNum_2',
@@ -495,13 +511,19 @@ alienBodyLearn = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
+
+# point learn_stim_trigs to device at port 'COM4' and make sure it's open
+learn_stim_trigs = serialCom4
+learn_stim_trigs.status = NOT_STARTED
+if not learn_stim_trigs.is_open:
+    learn_stim_trigs.open()
 alienEyeLearn = visual.GratingStim(
     win=win, name='alienEyeLearn',
     tex='sin', mask='gauss', anchor='center',
     ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
-    texRes=128.0, interpolate=True, depth=-2.0)
+    texRes=128.0, interpolate=True, depth=-3.0)
 explorerLearn = visual.ImageStim(
     win=win,
     name='explorerLearn', 
@@ -509,27 +531,33 @@ explorerLearn = visual.ImageStim(
     ori=0.0, pos=[0,0], size=[explW, explH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
+    texRes=128.0, interpolate=True, depth=-4.0)
 learn_photo_box = visual.Rect(
     win=win, name='learn_photo_box',units='norm', 
     width=(0.1, 0.4)[0], height=(0.1, 0.4)[1],
     ori=0.0, pos=(.95, 0), anchor='center',
     lineWidth=1.0,     colorSpace='rgb',  lineColor='white', fillColor='white',
-    opacity=None, depth=-4.0, interpolate=True)
+    opacity=None, depth=-5.0, interpolate=True)
 key_resp_learn = keyboard.Keyboard()
-
-# point learn_stim_trigs to device at port 'COM4' and make sure it's open
-learn_stim_trigs = serialCom4
-learn_stim_trigs.status = NOT_STARTED
-if not learn_stim_trigs.is_open:
-    learn_stim_trigs.open()
+health_border_2 = visual.Rect(
+    win=win, name='health_border_2',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-7.0, interpolate=True)
+health_fill_2 = visual.Rect(
+    win=win, name='health_fill_2',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-8.0, interpolate=True)
 learning_hint = visual.TextStim(win=win, name='learning_hint',
     text='Reminder: use the arrow keys to move the space explorer towards friendly aliens and away from hostile ones',
     font='Open Sans',
     pos=(0, -.35), height=textH, wrapWidth=1.2, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-7.0);
+    depth=-9.0);
 
 # --- Initialize components for Routine "learning_feedback" ---
 feedbackSoundLearn = sound.Sound('A', secs=.25, stereo=True, hamming=True,
@@ -571,6 +599,18 @@ explorerLearn2 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-6.0)
+health_border_3 = visual.Rect(
+    win=win, name='health_border_3',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-7.0, interpolate=True)
+health_fill_3 = visual.Rect(
+    win=win, name='health_fill_3',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-8.0, interpolate=True)
 
 # --- Initialize components for Routine "learning_feedback_label" ---
 trainingLabelLearn = sound.Sound('A', secs=.8, stereo=True, hamming=True,
@@ -612,6 +652,18 @@ explorerLearn3 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-6.0)
+health_border_4 = visual.Rect(
+    win=win, name='health_border_4',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-7.0, interpolate=True)
+health_fill_4 = visual.Rect(
+    win=win, name='health_fill_4',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-8.0, interpolate=True)
 
 # --- Initialize components for Routine "learning_blink" ---
 learn_trialNum_5 = visual.TextStim(win=win, name='learn_trialNum_5',
@@ -635,6 +687,18 @@ learn_blink_trigs = serialCom4
 learn_blink_trigs.status = NOT_STARTED
 if not learn_blink_trigs.is_open:
     learn_blink_trigs.open()
+health_border_5 = visual.Rect(
+    win=win, name='health_border_5',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-4.0, interpolate=True)
+health_fill_5 = visual.Rect(
+    win=win, name='health_fill_5',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-5.0, interpolate=True)
 
 # --- Initialize components for Routine "learning1_break1" ---
 learn1_break1_text = visual.TextStim(win=win, name='learn1_break1_text',
@@ -732,6 +796,18 @@ learn_fix_trigs = serialCom4
 learn_fix_trigs.status = NOT_STARTED
 if not learn_fix_trigs.is_open:
     learn_fix_trigs.open()
+health_border_1 = visual.Rect(
+    win=win, name='health_border_1',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-4.0, interpolate=True)
+health_fill_1 = visual.Rect(
+    win=win, name='health_fill_1',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-5.0, interpolate=True)
 
 # --- Initialize components for Routine "learning_presentation" ---
 learn_trialNum_2 = visual.TextStim(win=win, name='learn_trialNum_2',
@@ -749,13 +825,19 @@ alienBodyLearn = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
+
+# point learn_stim_trigs to device at port 'COM4' and make sure it's open
+learn_stim_trigs = serialCom4
+learn_stim_trigs.status = NOT_STARTED
+if not learn_stim_trigs.is_open:
+    learn_stim_trigs.open()
 alienEyeLearn = visual.GratingStim(
     win=win, name='alienEyeLearn',
     tex='sin', mask='gauss', anchor='center',
     ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
-    texRes=128.0, interpolate=True, depth=-2.0)
+    texRes=128.0, interpolate=True, depth=-3.0)
 explorerLearn = visual.ImageStim(
     win=win,
     name='explorerLearn', 
@@ -763,27 +845,33 @@ explorerLearn = visual.ImageStim(
     ori=0.0, pos=[0,0], size=[explW, explH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
+    texRes=128.0, interpolate=True, depth=-4.0)
 learn_photo_box = visual.Rect(
     win=win, name='learn_photo_box',units='norm', 
     width=(0.1, 0.4)[0], height=(0.1, 0.4)[1],
     ori=0.0, pos=(.95, 0), anchor='center',
     lineWidth=1.0,     colorSpace='rgb',  lineColor='white', fillColor='white',
-    opacity=None, depth=-4.0, interpolate=True)
+    opacity=None, depth=-5.0, interpolate=True)
 key_resp_learn = keyboard.Keyboard()
-
-# point learn_stim_trigs to device at port 'COM4' and make sure it's open
-learn_stim_trigs = serialCom4
-learn_stim_trigs.status = NOT_STARTED
-if not learn_stim_trigs.is_open:
-    learn_stim_trigs.open()
+health_border_2 = visual.Rect(
+    win=win, name='health_border_2',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-7.0, interpolate=True)
+health_fill_2 = visual.Rect(
+    win=win, name='health_fill_2',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-8.0, interpolate=True)
 learning_hint = visual.TextStim(win=win, name='learning_hint',
     text='Reminder: use the arrow keys to move the space explorer towards friendly aliens and away from hostile ones',
     font='Open Sans',
     pos=(0, -.35), height=textH, wrapWidth=1.2, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-7.0);
+    depth=-9.0);
 
 # --- Initialize components for Routine "learning_feedback" ---
 feedbackSoundLearn = sound.Sound('A', secs=.25, stereo=True, hamming=True,
@@ -825,6 +913,18 @@ explorerLearn2 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-6.0)
+health_border_3 = visual.Rect(
+    win=win, name='health_border_3',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-7.0, interpolate=True)
+health_fill_3 = visual.Rect(
+    win=win, name='health_fill_3',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-8.0, interpolate=True)
 
 # --- Initialize components for Routine "learning_feedback_label" ---
 trainingLabelLearn = sound.Sound('A', secs=.8, stereo=True, hamming=True,
@@ -866,6 +966,18 @@ explorerLearn3 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-6.0)
+health_border_4 = visual.Rect(
+    win=win, name='health_border_4',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-7.0, interpolate=True)
+health_fill_4 = visual.Rect(
+    win=win, name='health_fill_4',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-8.0, interpolate=True)
 
 # --- Initialize components for Routine "learning_blink" ---
 learn_trialNum_5 = visual.TextStim(win=win, name='learn_trialNum_5',
@@ -889,6 +1001,18 @@ learn_blink_trigs = serialCom4
 learn_blink_trigs.status = NOT_STARTED
 if not learn_blink_trigs.is_open:
     learn_blink_trigs.open()
+health_border_5 = visual.Rect(
+    win=win, name='health_border_5',
+    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-4.0, interpolate=True)
+health_fill_5 = visual.Rect(
+    win=win, name='health_fill_5',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-5.0, interpolate=True)
 
 # --- Initialize components for Routine "learning2_break1" ---
 learn2_break1_text = visual.TextStim(win=win, name='learn2_break1_text',
@@ -1282,7 +1406,7 @@ frameN = -1
 
 # --- Run Routine "resting_closed" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 30.0:
+while continueRoutine and routineTimer.getTime() < 1.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1313,7 +1437,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_closed_photobox_pre is stopping this frame...
     if resting_closed_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 30-frameTolerance:
+        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_closed_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1340,7 +1464,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_closed_trigs_pre is stopping this frame...
     if resting_closed_trigs_pre.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > 29.9-frameTolerance:
+        if tThisFlip > .9-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_trigs_pre.tStop = t  # not accounting for scr refresh
             resting_closed_trigs_pre.frameNStop = frameN  # exact frame index
@@ -1377,7 +1501,7 @@ for thisComponent in resting_closedComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-30.000000)
+    routineTimer.addTime(-1.000000)
 
 # --- Prepare to start Routine "resting_instructions_2" ---
 continueRoutine = True
@@ -1536,7 +1660,7 @@ frameN = -1
 
 # --- Run Routine "resting_open" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 30.0:
+while continueRoutine and routineTimer.getTime() < 1.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1567,7 +1691,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_open_photobox_pre is stopping this frame...
     if resting_open_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 30-frameTolerance:
+        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_open_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1594,7 +1718,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_open_trigs is stopping this frame...
     if resting_open_trigs.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > 29.9-frameTolerance:
+        if tThisFlip > .9-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_trigs.tStop = t  # not accounting for scr refresh
             resting_open_trigs.frameNStop = frameN  # exact frame index
@@ -1631,7 +1755,7 @@ for thisComponent in resting_openComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-30.000000)
+    routineTimer.addTime(-1.000000)
 
 # --- Prepare to start Routine "learning_instructions0" ---
 continueRoutine = True
@@ -3105,8 +3229,9 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         learn_trial_nums = "Training Module Progress: " + str(currentLoop.thisN + 1) + " of " + str(currentLoop.nTotal);
         
         learn_trialNum_1.setText(learn_trial_nums)
+        health_fill_1.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_fixationComponents = [learn_trialNum_1, fixationLearn, learn_fix_trigs]
+        learning_fixationComponents = [learn_trialNum_1, fixationLearn, learn_fix_trigs, health_border_1, health_fill_1]
         for thisComponent in learning_fixationComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3220,6 +3345,70 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
                     win.callOnFlip(learn_fix_trigs.write, bytes(chr(178), 'utf8'))
                     learn_fix_trigs.status = FINISHED
             
+            # *health_border_1* updates
+            
+            # if health_border_1 is starting this frame...
+            if health_border_1.status == NOT_STARTED and fixationLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_border_1.frameNStart = frameN  # exact frame index
+                health_border_1.tStart = t  # local t and not account for scr refresh
+                health_border_1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_1, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_1.started')
+                # update status
+                health_border_1.status = STARTED
+                health_border_1.setAutoDraw(True)
+            
+            # if health_border_1 is active this frame...
+            if health_border_1.status == STARTED:
+                # update params
+                pass
+            
+            # if health_border_1 is stopping this frame...
+            if health_border_1.status == STARTED:
+                if bool(fixationLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_border_1.tStop = t  # not accounting for scr refresh
+                    health_border_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_border_1.stopped')
+                    # update status
+                    health_border_1.status = FINISHED
+                    health_border_1.setAutoDraw(False)
+            
+            # *health_fill_1* updates
+            
+            # if health_fill_1 is starting this frame...
+            if health_fill_1.status == NOT_STARTED and fixationLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_fill_1.frameNStart = frameN  # exact frame index
+                health_fill_1.tStart = t  # local t and not account for scr refresh
+                health_fill_1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_1, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_1.started')
+                # update status
+                health_fill_1.status = STARTED
+                health_fill_1.setAutoDraw(True)
+            
+            # if health_fill_1 is active this frame...
+            if health_fill_1.status == STARTED:
+                # update params
+                pass
+            
+            # if health_fill_1 is stopping this frame...
+            if health_fill_1.status == STARTED:
+                if bool(fixationLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_fill_1.tStop = t  # not accounting for scr refresh
+                    health_fill_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_fill_1.stopped')
+                    # update status
+                    health_fill_1.status = FINISHED
+                    health_fill_1.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -3255,8 +3444,9 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         key_resp_learn.keys = []
         key_resp_learn.rt = []
         _key_resp_learn_allKeys = []
+        health_fill_2.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_presentationComponents = [learn_trialNum_2, alienBodyLearn, alienEyeLearn, explorerLearn, learn_photo_box, key_resp_learn, learn_stim_trigs, learning_hint]
+        learning_presentationComponents = [learn_trialNum_2, alienBodyLearn, learn_stim_trigs, alienEyeLearn, explorerLearn, learn_photo_box, key_resp_learn, health_border_2, health_fill_2, learning_hint]
         for thisComponent in learning_presentationComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3318,6 +3508,33 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             if alienBodyLearn.status == STARTED:
                 # update params
                 pass
+            
+            # if learn_stim_trigs is starting this frame...
+            if learn_stim_trigs.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+                # keep track of start time/frame for later
+                learn_stim_trigs.frameNStart = frameN  # exact frame index
+                learn_stim_trigs.tStart = t  # local t and not account for scr refresh
+                learn_stim_trigs.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(learn_stim_trigs, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.addData('learn_stim_trigs.started', t)
+                # update status
+                learn_stim_trigs.status = STARTED
+                learn_stim_trigs.write(bytes(chr(learn_ontrig), 'utf8'))
+                learn_stim_trigs.status = STARTED
+            
+            # if learn_stim_trigs is stopping this frame...
+            if learn_stim_trigs.status == STARTED:
+                if bool(len(_key_resp_learn_allKeys)):
+                    # keep track of stop time/frame for later
+                    learn_stim_trigs.tStop = t  # not accounting for scr refresh
+                    learn_stim_trigs.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.addData('learn_stim_trigs.stopped', t)
+                    # update status
+                    learn_stim_trigs.status = FINISHED
+                    learn_stim_trigs.write(bytes(chr(learn_offtrig), 'utf8'))
+                    learn_stim_trigs.status = FINISHED
             
             # *alienEyeLearn* updates
             
@@ -3432,32 +3649,45 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
                     # a response ends the routine
                     continueRoutine = False
             
-            # if learn_stim_trigs is starting this frame...
-            if learn_stim_trigs.status == NOT_STARTED and alienBodyLearn.status == STARTED:
-                # keep track of start time/frame for later
-                learn_stim_trigs.frameNStart = frameN  # exact frame index
-                learn_stim_trigs.tStart = t  # local t and not account for scr refresh
-                learn_stim_trigs.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(learn_stim_trigs, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.addData('learn_stim_trigs.started', t)
-                # update status
-                learn_stim_trigs.status = STARTED
-                learn_stim_trigs.write(bytes(chr(learn_ontrig), 'utf8'))
-                learn_stim_trigs.status = STARTED
+            # *health_border_2* updates
             
-            # if learn_stim_trigs is stopping this frame...
-            if learn_stim_trigs.status == STARTED:
-                if bool(len(_key_resp_learn_allKeys)):
-                    # keep track of stop time/frame for later
-                    learn_stim_trigs.tStop = t  # not accounting for scr refresh
-                    learn_stim_trigs.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.addData('learn_stim_trigs.stopped', t)
-                    # update status
-                    learn_stim_trigs.status = FINISHED
-                    learn_stim_trigs.write(bytes(chr(learn_offtrig), 'utf8'))
-                    learn_stim_trigs.status = FINISHED
+            # if health_border_2 is starting this frame...
+            if health_border_2.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_border_2.frameNStart = frameN  # exact frame index
+                health_border_2.tStart = t  # local t and not account for scr refresh
+                health_border_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_2.started')
+                # update status
+                health_border_2.status = STARTED
+                health_border_2.setAutoDraw(True)
+            
+            # if health_border_2 is active this frame...
+            if health_border_2.status == STARTED:
+                # update params
+                pass
+            
+            # *health_fill_2* updates
+            
+            # if health_fill_2 is starting this frame...
+            if health_fill_2.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_fill_2.frameNStart = frameN  # exact frame index
+                health_fill_2.tStart = t  # local t and not account for scr refresh
+                health_fill_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_2.started')
+                # update status
+                health_fill_2.status = STARTED
+                health_fill_2.setAutoDraw(True)
+            
+            # if health_fill_2 is active this frame...
+            if health_fill_2.status == STARTED:
+                # update params
+                pass
             
             # *learning_hint* updates
             
@@ -3527,14 +3757,19 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         else:
           feedback_tone = 'stimuli/buzz.wav'
           learn_acc_trig = 171
+          health_score = health_score - 1 #hp reduction
+        
+        #multiplied by the height param of the health_fill poly to represent proportional health
+        health_modifier = health_score/full_health_score #proportional health based on current hp
         feedbackSoundLearn.setSound(feedback_tone, secs=.25, hamming=True)
         feedbackSoundLearn.setVolume(1.0, log=False)
         learn_trialNum_3.setText(learn_trial_nums)
         alienEyeLearn2.setOri(learn_ori_val)
         alienEyeLearn2.setSF(learn_freq_val)
         explorerLearn2.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
+        health_fill_3.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_feedbackComponents = [feedbackSoundLearn, learn_feedback_trigs, learn_trialNum_3, alienBodyLearn2, alienEyeLearn2, explorerLearn2]
+        learning_feedbackComponents = [feedbackSoundLearn, learn_feedback_trigs, learn_trialNum_3, alienBodyLearn2, alienEyeLearn2, explorerLearn2, health_border_3, health_fill_3]
         for thisComponent in learning_feedbackComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3738,6 +3973,70 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
                     explorerLearn2.status = FINISHED
                     explorerLearn2.setAutoDraw(False)
             
+            # *health_border_3* updates
+            
+            # if health_border_3 is starting this frame...
+            if health_border_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_border_3.frameNStart = frameN  # exact frame index
+                health_border_3.tStart = t  # local t and not account for scr refresh
+                health_border_3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_3, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_3.started')
+                # update status
+                health_border_3.status = STARTED
+                health_border_3.setAutoDraw(True)
+            
+            # if health_border_3 is active this frame...
+            if health_border_3.status == STARTED:
+                # update params
+                pass
+            
+            # if health_border_3 is stopping this frame...
+            if health_border_3.status == STARTED:
+                if bool(feedbackSoundLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_border_3.tStop = t  # not accounting for scr refresh
+                    health_border_3.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_border_3.stopped')
+                    # update status
+                    health_border_3.status = FINISHED
+                    health_border_3.setAutoDraw(False)
+            
+            # *health_fill_3* updates
+            
+            # if health_fill_3 is starting this frame...
+            if health_fill_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_fill_3.frameNStart = frameN  # exact frame index
+                health_fill_3.tStart = t  # local t and not account for scr refresh
+                health_fill_3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_3, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_3.started')
+                # update status
+                health_fill_3.status = STARTED
+                health_fill_3.setAutoDraw(True)
+            
+            # if health_fill_3 is active this frame...
+            if health_fill_3.status == STARTED:
+                # update params
+                pass
+            
+            # if health_fill_3 is stopping this frame...
+            if health_fill_3.status == STARTED:
+                if bool(feedbackSoundLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_fill_3.tStop = t  # not accounting for scr refresh
+                    health_fill_3.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_fill_3.stopped')
+                    # update status
+                    health_fill_3.status = FINISHED
+                    health_fill_3.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -3793,8 +4092,9 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         alienEyeLearn3.setOri(learn_ori_val)
         alienEyeLearn3.setSF(learn_freq_val)
         explorerLearn3.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
+        health_fill_4.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_feedback_labelComponents = [trainingLabelLearn, learn_label_trigs, learn_trialNum_4, alienBodyLearn3, alienEyeLearn3, explorerLearn3]
+        learning_feedback_labelComponents = [trainingLabelLearn, learn_label_trigs, learn_trialNum_4, alienBodyLearn3, alienEyeLearn3, explorerLearn3, health_border_4, health_fill_4]
         for thisComponent in learning_feedback_labelComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3994,6 +4294,70 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
                     explorerLearn3.status = FINISHED
                     explorerLearn3.setAutoDraw(False)
             
+            # *health_border_4* updates
+            
+            # if health_border_4 is starting this frame...
+            if health_border_4.status == NOT_STARTED and trainingLabelLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_border_4.frameNStart = frameN  # exact frame index
+                health_border_4.tStart = t  # local t and not account for scr refresh
+                health_border_4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_4, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_4.started')
+                # update status
+                health_border_4.status = STARTED
+                health_border_4.setAutoDraw(True)
+            
+            # if health_border_4 is active this frame...
+            if health_border_4.status == STARTED:
+                # update params
+                pass
+            
+            # if health_border_4 is stopping this frame...
+            if health_border_4.status == STARTED:
+                if bool(trainingLabelLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_border_4.tStop = t  # not accounting for scr refresh
+                    health_border_4.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_border_4.stopped')
+                    # update status
+                    health_border_4.status = FINISHED
+                    health_border_4.setAutoDraw(False)
+            
+            # *health_fill_4* updates
+            
+            # if health_fill_4 is starting this frame...
+            if health_fill_4.status == NOT_STARTED and trainingLabelLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_fill_4.frameNStart = frameN  # exact frame index
+                health_fill_4.tStart = t  # local t and not account for scr refresh
+                health_fill_4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_4, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_4.started')
+                # update status
+                health_fill_4.status = STARTED
+                health_fill_4.setAutoDraw(True)
+            
+            # if health_fill_4 is active this frame...
+            if health_fill_4.status == STARTED:
+                # update params
+                pass
+            
+            # if health_fill_4 is stopping this frame...
+            if health_fill_4.status == STARTED:
+                if bool(trainingLabelLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_fill_4.tStop = t  # not accounting for scr refresh
+                    health_fill_4.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_fill_4.stopped')
+                    # update status
+                    health_fill_4.status = FINISHED
+                    health_fill_4.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -4027,8 +4391,9 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         learning_blink_key.keys = []
         learning_blink_key.rt = []
         _learning_blink_key_allKeys = []
+        health_fill_5.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs]
+        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs, health_border_5, health_fill_5]
         for thisComponent in learning_blinkComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -4144,6 +4509,46 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
                     learn_blink_trigs.status = FINISHED
                     learn_blink_trigs.write(bytes(chr(180), 'utf8'))
                     learn_blink_trigs.status = FINISHED
+            
+            # *health_border_5* updates
+            
+            # if health_border_5 is starting this frame...
+            if health_border_5.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                # keep track of start time/frame for later
+                health_border_5.frameNStart = frameN  # exact frame index
+                health_border_5.tStart = t  # local t and not account for scr refresh
+                health_border_5.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_5, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_5.started')
+                # update status
+                health_border_5.status = STARTED
+                health_border_5.setAutoDraw(True)
+            
+            # if health_border_5 is active this frame...
+            if health_border_5.status == STARTED:
+                # update params
+                pass
+            
+            # *health_fill_5* updates
+            
+            # if health_fill_5 is starting this frame...
+            if health_fill_5.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                # keep track of start time/frame for later
+                health_fill_5.frameNStart = frameN  # exact frame index
+                health_fill_5.tStart = t  # local t and not account for scr refresh
+                health_fill_5.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_5, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_5.started')
+                # update status
+                health_fill_5.status = STARTED
+                health_fill_5.setAutoDraw(True)
+            
+            # if health_fill_5 is active this frame...
+            if health_fill_5.status == STARTED:
+                # update params
+                pass
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4783,8 +5188,9 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         learn_trial_nums = "Training Module Progress: " + str(currentLoop.thisN + 1) + " of " + str(currentLoop.nTotal);
         
         learn_trialNum_1.setText(learn_trial_nums)
+        health_fill_1.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_fixationComponents = [learn_trialNum_1, fixationLearn, learn_fix_trigs]
+        learning_fixationComponents = [learn_trialNum_1, fixationLearn, learn_fix_trigs, health_border_1, health_fill_1]
         for thisComponent in learning_fixationComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -4898,6 +5304,70 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
                     win.callOnFlip(learn_fix_trigs.write, bytes(chr(178), 'utf8'))
                     learn_fix_trigs.status = FINISHED
             
+            # *health_border_1* updates
+            
+            # if health_border_1 is starting this frame...
+            if health_border_1.status == NOT_STARTED and fixationLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_border_1.frameNStart = frameN  # exact frame index
+                health_border_1.tStart = t  # local t and not account for scr refresh
+                health_border_1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_1, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_1.started')
+                # update status
+                health_border_1.status = STARTED
+                health_border_1.setAutoDraw(True)
+            
+            # if health_border_1 is active this frame...
+            if health_border_1.status == STARTED:
+                # update params
+                pass
+            
+            # if health_border_1 is stopping this frame...
+            if health_border_1.status == STARTED:
+                if bool(fixationLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_border_1.tStop = t  # not accounting for scr refresh
+                    health_border_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_border_1.stopped')
+                    # update status
+                    health_border_1.status = FINISHED
+                    health_border_1.setAutoDraw(False)
+            
+            # *health_fill_1* updates
+            
+            # if health_fill_1 is starting this frame...
+            if health_fill_1.status == NOT_STARTED and fixationLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_fill_1.frameNStart = frameN  # exact frame index
+                health_fill_1.tStart = t  # local t and not account for scr refresh
+                health_fill_1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_1, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_1.started')
+                # update status
+                health_fill_1.status = STARTED
+                health_fill_1.setAutoDraw(True)
+            
+            # if health_fill_1 is active this frame...
+            if health_fill_1.status == STARTED:
+                # update params
+                pass
+            
+            # if health_fill_1 is stopping this frame...
+            if health_fill_1.status == STARTED:
+                if bool(fixationLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_fill_1.tStop = t  # not accounting for scr refresh
+                    health_fill_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_fill_1.stopped')
+                    # update status
+                    health_fill_1.status = FINISHED
+                    health_fill_1.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -4933,8 +5403,9 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         key_resp_learn.keys = []
         key_resp_learn.rt = []
         _key_resp_learn_allKeys = []
+        health_fill_2.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_presentationComponents = [learn_trialNum_2, alienBodyLearn, alienEyeLearn, explorerLearn, learn_photo_box, key_resp_learn, learn_stim_trigs, learning_hint]
+        learning_presentationComponents = [learn_trialNum_2, alienBodyLearn, learn_stim_trigs, alienEyeLearn, explorerLearn, learn_photo_box, key_resp_learn, health_border_2, health_fill_2, learning_hint]
         for thisComponent in learning_presentationComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -4996,6 +5467,33 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             if alienBodyLearn.status == STARTED:
                 # update params
                 pass
+            
+            # if learn_stim_trigs is starting this frame...
+            if learn_stim_trigs.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+                # keep track of start time/frame for later
+                learn_stim_trigs.frameNStart = frameN  # exact frame index
+                learn_stim_trigs.tStart = t  # local t and not account for scr refresh
+                learn_stim_trigs.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(learn_stim_trigs, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.addData('learn_stim_trigs.started', t)
+                # update status
+                learn_stim_trigs.status = STARTED
+                learn_stim_trigs.write(bytes(chr(learn_ontrig), 'utf8'))
+                learn_stim_trigs.status = STARTED
+            
+            # if learn_stim_trigs is stopping this frame...
+            if learn_stim_trigs.status == STARTED:
+                if bool(len(_key_resp_learn_allKeys)):
+                    # keep track of stop time/frame for later
+                    learn_stim_trigs.tStop = t  # not accounting for scr refresh
+                    learn_stim_trigs.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.addData('learn_stim_trigs.stopped', t)
+                    # update status
+                    learn_stim_trigs.status = FINISHED
+                    learn_stim_trigs.write(bytes(chr(learn_offtrig), 'utf8'))
+                    learn_stim_trigs.status = FINISHED
             
             # *alienEyeLearn* updates
             
@@ -5110,32 +5608,45 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
                     # a response ends the routine
                     continueRoutine = False
             
-            # if learn_stim_trigs is starting this frame...
-            if learn_stim_trigs.status == NOT_STARTED and alienBodyLearn.status == STARTED:
-                # keep track of start time/frame for later
-                learn_stim_trigs.frameNStart = frameN  # exact frame index
-                learn_stim_trigs.tStart = t  # local t and not account for scr refresh
-                learn_stim_trigs.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(learn_stim_trigs, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.addData('learn_stim_trigs.started', t)
-                # update status
-                learn_stim_trigs.status = STARTED
-                learn_stim_trigs.write(bytes(chr(learn_ontrig), 'utf8'))
-                learn_stim_trigs.status = STARTED
+            # *health_border_2* updates
             
-            # if learn_stim_trigs is stopping this frame...
-            if learn_stim_trigs.status == STARTED:
-                if bool(len(_key_resp_learn_allKeys)):
-                    # keep track of stop time/frame for later
-                    learn_stim_trigs.tStop = t  # not accounting for scr refresh
-                    learn_stim_trigs.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.addData('learn_stim_trigs.stopped', t)
-                    # update status
-                    learn_stim_trigs.status = FINISHED
-                    learn_stim_trigs.write(bytes(chr(learn_offtrig), 'utf8'))
-                    learn_stim_trigs.status = FINISHED
+            # if health_border_2 is starting this frame...
+            if health_border_2.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_border_2.frameNStart = frameN  # exact frame index
+                health_border_2.tStart = t  # local t and not account for scr refresh
+                health_border_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_2.started')
+                # update status
+                health_border_2.status = STARTED
+                health_border_2.setAutoDraw(True)
+            
+            # if health_border_2 is active this frame...
+            if health_border_2.status == STARTED:
+                # update params
+                pass
+            
+            # *health_fill_2* updates
+            
+            # if health_fill_2 is starting this frame...
+            if health_fill_2.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_fill_2.frameNStart = frameN  # exact frame index
+                health_fill_2.tStart = t  # local t and not account for scr refresh
+                health_fill_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_2.started')
+                # update status
+                health_fill_2.status = STARTED
+                health_fill_2.setAutoDraw(True)
+            
+            # if health_fill_2 is active this frame...
+            if health_fill_2.status == STARTED:
+                # update params
+                pass
             
             # *learning_hint* updates
             
@@ -5205,14 +5716,19 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         else:
           feedback_tone = 'stimuli/buzz.wav'
           learn_acc_trig = 171
+          health_score = health_score - 1 #hp reduction
+        
+        #multiplied by the height param of the health_fill poly to represent proportional health
+        health_modifier = health_score/full_health_score #proportional health based on current hp
         feedbackSoundLearn.setSound(feedback_tone, secs=.25, hamming=True)
         feedbackSoundLearn.setVolume(1.0, log=False)
         learn_trialNum_3.setText(learn_trial_nums)
         alienEyeLearn2.setOri(learn_ori_val)
         alienEyeLearn2.setSF(learn_freq_val)
         explorerLearn2.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
+        health_fill_3.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_feedbackComponents = [feedbackSoundLearn, learn_feedback_trigs, learn_trialNum_3, alienBodyLearn2, alienEyeLearn2, explorerLearn2]
+        learning_feedbackComponents = [feedbackSoundLearn, learn_feedback_trigs, learn_trialNum_3, alienBodyLearn2, alienEyeLearn2, explorerLearn2, health_border_3, health_fill_3]
         for thisComponent in learning_feedbackComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -5416,6 +5932,70 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
                     explorerLearn2.status = FINISHED
                     explorerLearn2.setAutoDraw(False)
             
+            # *health_border_3* updates
+            
+            # if health_border_3 is starting this frame...
+            if health_border_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_border_3.frameNStart = frameN  # exact frame index
+                health_border_3.tStart = t  # local t and not account for scr refresh
+                health_border_3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_3, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_3.started')
+                # update status
+                health_border_3.status = STARTED
+                health_border_3.setAutoDraw(True)
+            
+            # if health_border_3 is active this frame...
+            if health_border_3.status == STARTED:
+                # update params
+                pass
+            
+            # if health_border_3 is stopping this frame...
+            if health_border_3.status == STARTED:
+                if bool(feedbackSoundLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_border_3.tStop = t  # not accounting for scr refresh
+                    health_border_3.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_border_3.stopped')
+                    # update status
+                    health_border_3.status = FINISHED
+                    health_border_3.setAutoDraw(False)
+            
+            # *health_fill_3* updates
+            
+            # if health_fill_3 is starting this frame...
+            if health_fill_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_fill_3.frameNStart = frameN  # exact frame index
+                health_fill_3.tStart = t  # local t and not account for scr refresh
+                health_fill_3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_3, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_3.started')
+                # update status
+                health_fill_3.status = STARTED
+                health_fill_3.setAutoDraw(True)
+            
+            # if health_fill_3 is active this frame...
+            if health_fill_3.status == STARTED:
+                # update params
+                pass
+            
+            # if health_fill_3 is stopping this frame...
+            if health_fill_3.status == STARTED:
+                if bool(feedbackSoundLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_fill_3.tStop = t  # not accounting for scr refresh
+                    health_fill_3.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_fill_3.stopped')
+                    # update status
+                    health_fill_3.status = FINISHED
+                    health_fill_3.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -5471,8 +6051,9 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         alienEyeLearn3.setOri(learn_ori_val)
         alienEyeLearn3.setSF(learn_freq_val)
         explorerLearn3.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
+        health_fill_4.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_feedback_labelComponents = [trainingLabelLearn, learn_label_trigs, learn_trialNum_4, alienBodyLearn3, alienEyeLearn3, explorerLearn3]
+        learning_feedback_labelComponents = [trainingLabelLearn, learn_label_trigs, learn_trialNum_4, alienBodyLearn3, alienEyeLearn3, explorerLearn3, health_border_4, health_fill_4]
         for thisComponent in learning_feedback_labelComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -5672,6 +6253,70 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
                     explorerLearn3.status = FINISHED
                     explorerLearn3.setAutoDraw(False)
             
+            # *health_border_4* updates
+            
+            # if health_border_4 is starting this frame...
+            if health_border_4.status == NOT_STARTED and trainingLabelLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_border_4.frameNStart = frameN  # exact frame index
+                health_border_4.tStart = t  # local t and not account for scr refresh
+                health_border_4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_4, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_4.started')
+                # update status
+                health_border_4.status = STARTED
+                health_border_4.setAutoDraw(True)
+            
+            # if health_border_4 is active this frame...
+            if health_border_4.status == STARTED:
+                # update params
+                pass
+            
+            # if health_border_4 is stopping this frame...
+            if health_border_4.status == STARTED:
+                if bool(trainingLabelLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_border_4.tStop = t  # not accounting for scr refresh
+                    health_border_4.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_border_4.stopped')
+                    # update status
+                    health_border_4.status = FINISHED
+                    health_border_4.setAutoDraw(False)
+            
+            # *health_fill_4* updates
+            
+            # if health_fill_4 is starting this frame...
+            if health_fill_4.status == NOT_STARTED and trainingLabelLearn.status == STARTED:
+                # keep track of start time/frame for later
+                health_fill_4.frameNStart = frameN  # exact frame index
+                health_fill_4.tStart = t  # local t and not account for scr refresh
+                health_fill_4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_4, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_4.started')
+                # update status
+                health_fill_4.status = STARTED
+                health_fill_4.setAutoDraw(True)
+            
+            # if health_fill_4 is active this frame...
+            if health_fill_4.status == STARTED:
+                # update params
+                pass
+            
+            # if health_fill_4 is stopping this frame...
+            if health_fill_4.status == STARTED:
+                if bool(trainingLabelLearn.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    health_fill_4.tStop = t  # not accounting for scr refresh
+                    health_fill_4.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'health_fill_4.stopped')
+                    # update status
+                    health_fill_4.status = FINISHED
+                    health_fill_4.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -5705,8 +6350,9 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         learning_blink_key.keys = []
         learning_blink_key.rt = []
         _learning_blink_key_allKeys = []
+        health_fill_5.setSize((0.08, (.5*health_modifier)))
         # keep track of which components have finished
-        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs]
+        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs, health_border_5, health_fill_5]
         for thisComponent in learning_blinkComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -5822,6 +6468,46 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
                     learn_blink_trigs.status = FINISHED
                     learn_blink_trigs.write(bytes(chr(180), 'utf8'))
                     learn_blink_trigs.status = FINISHED
+            
+            # *health_border_5* updates
+            
+            # if health_border_5 is starting this frame...
+            if health_border_5.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                # keep track of start time/frame for later
+                health_border_5.frameNStart = frameN  # exact frame index
+                health_border_5.tStart = t  # local t and not account for scr refresh
+                health_border_5.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_5, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_border_5.started')
+                # update status
+                health_border_5.status = STARTED
+                health_border_5.setAutoDraw(True)
+            
+            # if health_border_5 is active this frame...
+            if health_border_5.status == STARTED:
+                # update params
+                pass
+            
+            # *health_fill_5* updates
+            
+            # if health_fill_5 is starting this frame...
+            if health_fill_5.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                # keep track of start time/frame for later
+                health_fill_5.frameNStart = frameN  # exact frame index
+                health_fill_5.tStart = t  # local t and not account for scr refresh
+                health_fill_5.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_5, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'health_fill_5.started')
+                # update status
+                health_fill_5.status = STARTED
+                health_fill_5.setAutoDraw(True)
+            
+            # if health_fill_5 is active this frame...
+            if health_fill_5.status == STARTED:
+                # update params
+                pass
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
