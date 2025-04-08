@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 08, 2025, at 13:27
+    on April 08, 2025, at 14:26
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -734,14 +734,14 @@ alienBodyDemo2 = visual.ImageStim(
     ori=0.0, pos=(.45, 0), size=[alienW, alienH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=0.0)
+    texRes=128.0, interpolate=True, depth=-1.0)
 alienEyeDemo2 = visual.GratingStim(
     win=win, name='alienEyeDemo2',
     tex='sin', mask='gauss', anchor='center',
     ori=41.0, pos=(.45, .1), size=[eyeSize, eyeSize], sf=10.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=-2.0)
 explorerDemo2_U = visual.ImageStim(
     win=win,
     name='explorerDemo2_U', 
@@ -749,14 +749,14 @@ explorerDemo2_U = visual.ImageStim(
     ori=0.0, pos=(.45, .25), size=[explW, explH],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-2.0)
+    texRes=128.0, interpolate=True, depth=-3.0)
 instructionLearn2 = visual.TextStim(win=win, name='instructionLearn2',
     text='You’re doing great! You are currently at the halfway point of your training. The second part of your training will take place on a different part of the planet. The same friendly and hostile species exist on this part of the planet. \n\nAs before you will use the arrow keys to direct the space explorer towards friendly aliens and away from hostile ones. Press the spacebar when you are ready to continue.',
     font='Open Sans',
     pos=(-.25, 0), height=textH, wrapWidth=0.8, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-4.0);
 learning2_keyboard = keyboard.Keyboard()
 
 # point learn2_instruction_trigs to device at port 'COM4' and make sure it's open
@@ -1406,7 +1406,7 @@ frameN = -1
 
 # --- Run Routine "resting_closed" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 1.0:
+while continueRoutine and routineTimer.getTime() < 30.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1437,7 +1437,7 @@ while continueRoutine and routineTimer.getTime() < 1.0:
     # if resting_closed_photobox_pre is stopping this frame...
     if resting_closed_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 30-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_closed_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1464,7 +1464,7 @@ while continueRoutine and routineTimer.getTime() < 1.0:
     # if resting_closed_trigs_pre is stopping this frame...
     if resting_closed_trigs_pre.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > .9-frameTolerance:
+        if tThisFlip > 29.9-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_trigs_pre.tStop = t  # not accounting for scr refresh
             resting_closed_trigs_pre.frameNStop = frameN  # exact frame index
@@ -1501,7 +1501,7 @@ for thisComponent in resting_closedComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-1.000000)
+    routineTimer.addTime(-30.000000)
 
 # --- Prepare to start Routine "resting_instructions_2" ---
 continueRoutine = True
@@ -1660,7 +1660,7 @@ frameN = -1
 
 # --- Run Routine "resting_open" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 1.0:
+while continueRoutine and routineTimer.getTime() < 30.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1691,7 +1691,7 @@ while continueRoutine and routineTimer.getTime() < 1.0:
     # if resting_open_photobox_pre is stopping this frame...
     if resting_open_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 30-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_open_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1718,7 +1718,7 @@ while continueRoutine and routineTimer.getTime() < 1.0:
     # if resting_open_trigs is stopping this frame...
     if resting_open_trigs.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > .9-frameTolerance:
+        if tThisFlip > 29.9-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_trigs.tStop = t  # not accounting for scr refresh
             resting_open_trigs.frameNStop = frameN  # exact frame index
@@ -1755,7 +1755,7 @@ for thisComponent in resting_openComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-1.000000)
+    routineTimer.addTime(-30.000000)
 
 # --- Prepare to start Routine "learning_instructions0" ---
 continueRoutine = True
@@ -4592,6 +4592,14 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
     if learning1_oddcond_loop.nRemaining == 0:
         continueRoutine=False
     
+    #give up to 10 hp after finishing each block
+    if (full_health_score - health_score) < 10:
+        health_score = full_health_score
+    else:
+        health_score = health_score + 10
+    
+    health_modifier = health_score/full_health_score
+    
     learn1_break1_trig = learning1_oddcond_loop.thisN + 15
     learn1_break1_keys.keys = []
     learn1_break1_keys.rt = []
@@ -4841,6 +4849,10 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
 # --- Prepare to start Routine "learning2_instructions" ---
 continueRoutine = True
 # update component parameters for each repeat
+# Run 'Begin Routine' code from health_reset_code
+#sets health back to full for second half of task
+health_score = full_health_score
+health_modifier = health_score/full_health_score
 learning2_keyboard.keys = []
 learning2_keyboard.rt = []
 _learning2_keyboard_allKeys = []
@@ -6550,7 +6562,14 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
     # Run 'Begin Routine' code from skip_learn2_break1_code
     if learning2_oddcond_loop.nRemaining == 0:
         continueRoutine=False
-        
+    
+    if (full_health_score - health_score) < 10:
+        health_score = full_health_score
+    else:
+        health_score = health_score + 10
+    
+    health_modifier = health_score/full_health_score
+    
     learn2_break1_trig = learning2_oddcond_loop.thisN + 20
     learning2_break1_keys.keys = []
     learning2_break1_keys.rt = []

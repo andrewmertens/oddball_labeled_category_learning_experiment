@@ -2686,6 +2686,23 @@
       </SerialOutComponent>
     </Routine>
     <Routine name="learning2_instructions">
+      <CodeComponent name="health_reset_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="health_score = full_health_score;&amp;#10;health_modifier = (health_score / full_health_score);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="#sets health back to full for second half of task&amp;#10;health_score = full_health_score&amp;#10;health_modifier = health_score/full_health_score" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="health_reset_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <RoutineSettingsComponent name="learning2_instructions" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -4896,8 +4913,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((learning1_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;learn1_break1_trig = (learning1_oddcond_loop.thisN + 15);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if learning1_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;&amp;#10;learn1_break1_trig = learning1_oddcond_loop.thisN + 15" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((learning1_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;if (((full_health_score - health_score) &lt; 10)) {&amp;#10;    health_score = full_health_score;&amp;#10;} else {&amp;#10;    health_score = (health_score + 10);&amp;#10;}&amp;#10;health_modifier = (health_score / full_health_score);&amp;#10;learn1_break1_trig = (learning1_oddcond_loop.thisN + 15);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if learning1_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;&amp;#10;#give up to 10 hp after finishing each block&amp;#10;if (full_health_score - health_score) &lt; 10:&amp;#10;    health_score = full_health_score&amp;#10;else:&amp;#10;    health_score = health_score + 10&amp;#10;&amp;#10;health_modifier = health_score/full_health_score&amp;#10;&amp;#10;learn1_break1_trig = learning1_oddcond_loop.thisN + 15" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -5073,8 +5090,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((learning2_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;learn2_break1_trig = (learning2_oddcond_loop.thisN + 20);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if learning2_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;    &amp;#10;learn2_break1_trig = learning2_oddcond_loop.thisN + 20" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((learning2_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;if (((full_health_score - health_score) &lt; 10)) {&amp;#10;    health_score = full_health_score;&amp;#10;} else {&amp;#10;    health_score = (health_score + 10);&amp;#10;}&amp;#10;health_modifier = (health_score / full_health_score);&amp;#10;learn2_break1_trig = (learning2_oddcond_loop.thisN + 20);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if learning2_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;&amp;#10;if (full_health_score - health_score) &lt; 10:&amp;#10;    health_score = full_health_score&amp;#10;else:&amp;#10;    health_score = health_score + 10&amp;#10;&amp;#10;health_modifier = health_score/full_health_score&amp;#10;&amp;#10;learn2_break1_trig = learning2_oddcond_loop.thisN + 20" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
