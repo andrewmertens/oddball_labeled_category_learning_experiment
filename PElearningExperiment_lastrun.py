@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 07, 2025, at 11:24
+    on April 08, 2025, at 10:25
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -3342,7 +3342,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             # *explorerLearn* updates
             
             # if explorerLearn is starting this frame...
-            if explorerLearn.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+            if explorerLearn.status == NOT_STARTED and frameN >= 31:
                 # keep track of start time/frame for later
                 explorerLearn.frameNStart = frameN  # exact frame index
                 explorerLearn.tStart = t  # local t and not account for scr refresh
@@ -3395,7 +3395,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             waitOnFlip = False
             
             # if key_resp_learn is starting this frame...
-            if key_resp_learn.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+            if key_resp_learn.status == NOT_STARTED and explorerLearn.status == STARTED:
                 # keep track of start time/frame for later
                 key_resp_learn.frameNStart = frameN  # exact frame index
                 key_resp_learn.tStart = t  # local t and not account for scr refresh
@@ -5020,7 +5020,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             # *explorerLearn* updates
             
             # if explorerLearn is starting this frame...
-            if explorerLearn.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+            if explorerLearn.status == NOT_STARTED and frameN >= 31:
                 # keep track of start time/frame for later
                 explorerLearn.frameNStart = frameN  # exact frame index
                 explorerLearn.tStart = t  # local t and not account for scr refresh
@@ -5073,7 +5073,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             waitOnFlip = False
             
             # if key_resp_learn is starting this frame...
-            if key_resp_learn.status == NOT_STARTED and alienBodyLearn.status == STARTED:
+            if key_resp_learn.status == NOT_STARTED and explorerLearn.status == STARTED:
                 # keep track of start time/frame for later
                 key_resp_learn.frameNStart = frameN  # exact frame index
                 key_resp_learn.tStart = t  # local t and not account for scr refresh
