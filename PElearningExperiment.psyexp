@@ -264,10 +264,10 @@
         <Param val="health_border_3" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
@@ -291,10 +291,10 @@
         <Param val="health_fill_3" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, (.5*health_modifier))" valType="list" updates="set every repeat" name="size"/>
+        <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
@@ -509,10 +509,10 @@
         <Param val="health_border_2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="alienBodyLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
@@ -536,10 +536,10 @@
         <Param val="health_fill_2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, (.5*health_modifier))" valType="list" updates="set every repeat" name="size"/>
+        <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="alienBodyLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
@@ -3762,10 +3762,10 @@
         <Param val="health_border_1" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="fixationLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
@@ -3789,10 +3789,10 @@
         <Param val="health_fill_1" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, (.5*health_modifier))" valType="list" updates="set every repeat" name="size"/>
+        <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="fixationLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
@@ -3994,10 +3994,10 @@
         <Param val="health_border_4" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="trainingLabelLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
@@ -4021,10 +4021,10 @@
         <Param val="health_fill_4" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, (.5*health_modifier))" valType="list" updates="set every repeat" name="size"/>
+        <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="trainingLabelLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
@@ -4155,10 +4155,10 @@
         <Param val="health_border_5" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
@@ -4182,10 +4182,10 @@
         <Param val="health_fill_5" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.4, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.08, (.5*health_modifier))" valType="list" updates="set every repeat" name="size"/>
+        <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
@@ -4831,8 +4831,8 @@
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <CodeComponent name="stim_setup" plugin="None">
-        <Param val="alienH = .4&amp;#10;alienW = .2686&amp;#10;&amp;#10;eyeSize = .11&amp;#10;&amp;#10;explH = .1233&amp;#10;explW = .1&amp;#10;&amp;#10;textH = .04&amp;#10;fixationH = .1&amp;#10;&amp;#10;alien_body_file = 'stimuli/alienBody6.png'&amp;#10;&amp;#10;full_health_score = 20 #starting hp&amp;#10;health_score = full_health_score&amp;#10;health_modifier = 1 #starting modifier (full health)" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="alienH = 0.4;&amp;#10;alienW = 0.2686;&amp;#10;eyeSize = 0.11;&amp;#10;explH = 0.1233;&amp;#10;explW = 0.1;&amp;#10;textH = 0.04;&amp;#10;fixationH = 0.1;&amp;#10;alien_body_file = &quot;stimuli/alienBody6.png&quot;;&amp;#10;full_health_score = 20;&amp;#10;health_score = full_health_score;&amp;#10;health_modifier = 1;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="alienH = .4&amp;#10;alienW = .2686&amp;#10;&amp;#10;eyeSize = .11&amp;#10;&amp;#10;explH = .1233&amp;#10;explW = .1&amp;#10;&amp;#10;textH = .04&amp;#10;fixationH = .1&amp;#10;&amp;#10;healthbarH = .4&amp;#10;healthbarW = .06&amp;#10;healthbarPosH = -.4&amp;#10;healthbarPosV = -.2&amp;#10;&amp;#10;&amp;#10;alien_body_file = 'stimuli/alienBody6.png'&amp;#10;&amp;#10;full_health_score = 20 #starting hp&amp;#10;health_score = full_health_score&amp;#10;health_modifier = 1 #starting modifier (full health)" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="alienH = 0.4;&amp;#10;alienW = 0.2686;&amp;#10;eyeSize = 0.11;&amp;#10;explH = 0.1233;&amp;#10;explW = 0.1;&amp;#10;textH = 0.04;&amp;#10;fixationH = 0.1;&amp;#10;healthbarH = 0.4;&amp;#10;healthbarW = 0.06;&amp;#10;healthbarPosH = (- 0.4);&amp;#10;healthbarPosV = (- 0.2);&amp;#10;alien_body_file = &quot;stimuli/alienBody6.png&quot;;&amp;#10;full_health_score = 20;&amp;#10;health_score = full_health_score;&amp;#10;health_modifier = 1;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>

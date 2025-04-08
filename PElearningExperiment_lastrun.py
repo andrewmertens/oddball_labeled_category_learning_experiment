@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 08, 2025, at 14:26
+    on April 08, 2025, at 14:45
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -45,6 +45,12 @@ explW = .1
 
 textH = .04
 fixationH = .1
+
+healthbarH = .4
+healthbarW = .06
+healthbarPosH = -.4
+healthbarPosV = -.2
+
 
 alien_body_file = 'stimuli/alienBody6.png'
 
@@ -484,14 +490,14 @@ if not learn_fix_trigs.is_open:
     learn_fix_trigs.open()
 health_border_1 = visual.Rect(
     win=win, name='health_border_1',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-4.0, interpolate=True)
 health_fill_1 = visual.Rect(
     win=win, name='health_fill_1',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-5.0, interpolate=True)
 
@@ -541,14 +547,14 @@ learn_photo_box = visual.Rect(
 key_resp_learn = keyboard.Keyboard()
 health_border_2 = visual.Rect(
     win=win, name='health_border_2',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-7.0, interpolate=True)
 health_fill_2 = visual.Rect(
     win=win, name='health_fill_2',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-8.0, interpolate=True)
 learning_hint = visual.TextStim(win=win, name='learning_hint',
@@ -601,14 +607,14 @@ explorerLearn2 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-6.0)
 health_border_3 = visual.Rect(
     win=win, name='health_border_3',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-7.0, interpolate=True)
 health_fill_3 = visual.Rect(
     win=win, name='health_fill_3',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-8.0, interpolate=True)
 
@@ -654,14 +660,14 @@ explorerLearn3 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-6.0)
 health_border_4 = visual.Rect(
     win=win, name='health_border_4',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-7.0, interpolate=True)
 health_fill_4 = visual.Rect(
     win=win, name='health_fill_4',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-8.0, interpolate=True)
 
@@ -689,14 +695,14 @@ if not learn_blink_trigs.is_open:
     learn_blink_trigs.open()
 health_border_5 = visual.Rect(
     win=win, name='health_border_5',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-4.0, interpolate=True)
 health_fill_5 = visual.Rect(
     win=win, name='health_fill_5',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-5.0, interpolate=True)
 
@@ -798,14 +804,14 @@ if not learn_fix_trigs.is_open:
     learn_fix_trigs.open()
 health_border_1 = visual.Rect(
     win=win, name='health_border_1',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-4.0, interpolate=True)
 health_fill_1 = visual.Rect(
     win=win, name='health_fill_1',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-5.0, interpolate=True)
 
@@ -855,14 +861,14 @@ learn_photo_box = visual.Rect(
 key_resp_learn = keyboard.Keyboard()
 health_border_2 = visual.Rect(
     win=win, name='health_border_2',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-7.0, interpolate=True)
 health_fill_2 = visual.Rect(
     win=win, name='health_fill_2',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-8.0, interpolate=True)
 learning_hint = visual.TextStim(win=win, name='learning_hint',
@@ -915,14 +921,14 @@ explorerLearn2 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-6.0)
 health_border_3 = visual.Rect(
     win=win, name='health_border_3',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-7.0, interpolate=True)
 health_fill_3 = visual.Rect(
     win=win, name='health_fill_3',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-8.0, interpolate=True)
 
@@ -968,14 +974,14 @@ explorerLearn3 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-6.0)
 health_border_4 = visual.Rect(
     win=win, name='health_border_4',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-7.0, interpolate=True)
 health_fill_4 = visual.Rect(
     win=win, name='health_fill_4',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-8.0, interpolate=True)
 
@@ -1003,14 +1009,14 @@ if not learn_blink_trigs.is_open:
     learn_blink_trigs.open()
 health_border_5 = visual.Rect(
     win=win, name='health_border_5',
-    width=(0.08, 0.5)[0], height=(0.08, 0.5)[1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-4.0, interpolate=True)
 health_fill_5 = visual.Rect(
     win=win, name='health_fill_5',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
-    ori=0.0, pos=(-.4, -.2), anchor='bottom-left',
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-5.0, interpolate=True)
 
@@ -1406,7 +1412,7 @@ frameN = -1
 
 # --- Run Routine "resting_closed" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 30.0:
+while continueRoutine and routineTimer.getTime() < 1.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1437,7 +1443,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_closed_photobox_pre is stopping this frame...
     if resting_closed_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 30-frameTolerance:
+        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_closed_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1464,7 +1470,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_closed_trigs_pre is stopping this frame...
     if resting_closed_trigs_pre.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > 29.9-frameTolerance:
+        if tThisFlip > 0.9-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_trigs_pre.tStop = t  # not accounting for scr refresh
             resting_closed_trigs_pre.frameNStop = frameN  # exact frame index
@@ -1501,7 +1507,7 @@ for thisComponent in resting_closedComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-30.000000)
+    routineTimer.addTime(-1.000000)
 
 # --- Prepare to start Routine "resting_instructions_2" ---
 continueRoutine = True
@@ -1660,7 +1666,7 @@ frameN = -1
 
 # --- Run Routine "resting_open" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 30.0:
+while continueRoutine and routineTimer.getTime() < 1.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1691,7 +1697,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_open_photobox_pre is stopping this frame...
     if resting_open_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 30-frameTolerance:
+        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_open_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1718,7 +1724,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_open_trigs is stopping this frame...
     if resting_open_trigs.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > 29.9-frameTolerance:
+        if tThisFlip > 0.9-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_trigs.tStop = t  # not accounting for scr refresh
             resting_open_trigs.frameNStop = frameN  # exact frame index
@@ -1755,7 +1761,7 @@ for thisComponent in resting_openComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-30.000000)
+    routineTimer.addTime(-1.000000)
 
 # --- Prepare to start Routine "learning_instructions0" ---
 continueRoutine = True
@@ -3229,7 +3235,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         learn_trial_nums = "Training Module Progress: " + str(currentLoop.thisN + 1) + " of " + str(currentLoop.nTotal);
         
         learn_trialNum_1.setText(learn_trial_nums)
-        health_fill_1.setSize((0.08, (.5*health_modifier)))
+        health_fill_1.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_fixationComponents = [learn_trialNum_1, fixationLearn, learn_fix_trigs, health_border_1, health_fill_1]
         for thisComponent in learning_fixationComponents:
@@ -3444,7 +3450,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         key_resp_learn.keys = []
         key_resp_learn.rt = []
         _key_resp_learn_allKeys = []
-        health_fill_2.setSize((0.08, (.5*health_modifier)))
+        health_fill_2.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_presentationComponents = [learn_trialNum_2, alienBodyLearn, learn_stim_trigs, alienEyeLearn, explorerLearn, learn_photo_box, key_resp_learn, health_border_2, health_fill_2, learning_hint]
         for thisComponent in learning_presentationComponents:
@@ -3767,7 +3773,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         alienEyeLearn2.setOri(learn_ori_val)
         alienEyeLearn2.setSF(learn_freq_val)
         explorerLearn2.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
-        health_fill_3.setSize((0.08, (.5*health_modifier)))
+        health_fill_3.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_feedbackComponents = [feedbackSoundLearn, learn_feedback_trigs, learn_trialNum_3, alienBodyLearn2, alienEyeLearn2, explorerLearn2, health_border_3, health_fill_3]
         for thisComponent in learning_feedbackComponents:
@@ -4092,7 +4098,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         alienEyeLearn3.setOri(learn_ori_val)
         alienEyeLearn3.setSF(learn_freq_val)
         explorerLearn3.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
-        health_fill_4.setSize((0.08, (.5*health_modifier)))
+        health_fill_4.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_feedback_labelComponents = [trainingLabelLearn, learn_label_trigs, learn_trialNum_4, alienBodyLearn3, alienEyeLearn3, explorerLearn3, health_border_4, health_fill_4]
         for thisComponent in learning_feedback_labelComponents:
@@ -4391,7 +4397,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         learning_blink_key.keys = []
         learning_blink_key.rt = []
         _learning_blink_key_allKeys = []
-        health_fill_5.setSize((0.08, (.5*health_modifier)))
+        health_fill_5.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs, health_border_5, health_fill_5]
         for thisComponent in learning_blinkComponents:
@@ -5200,7 +5206,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         learn_trial_nums = "Training Module Progress: " + str(currentLoop.thisN + 1) + " of " + str(currentLoop.nTotal);
         
         learn_trialNum_1.setText(learn_trial_nums)
-        health_fill_1.setSize((0.08, (.5*health_modifier)))
+        health_fill_1.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_fixationComponents = [learn_trialNum_1, fixationLearn, learn_fix_trigs, health_border_1, health_fill_1]
         for thisComponent in learning_fixationComponents:
@@ -5415,7 +5421,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         key_resp_learn.keys = []
         key_resp_learn.rt = []
         _key_resp_learn_allKeys = []
-        health_fill_2.setSize((0.08, (.5*health_modifier)))
+        health_fill_2.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_presentationComponents = [learn_trialNum_2, alienBodyLearn, learn_stim_trigs, alienEyeLearn, explorerLearn, learn_photo_box, key_resp_learn, health_border_2, health_fill_2, learning_hint]
         for thisComponent in learning_presentationComponents:
@@ -5738,7 +5744,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         alienEyeLearn2.setOri(learn_ori_val)
         alienEyeLearn2.setSF(learn_freq_val)
         explorerLearn2.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
-        health_fill_3.setSize((0.08, (.5*health_modifier)))
+        health_fill_3.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_feedbackComponents = [feedbackSoundLearn, learn_feedback_trigs, learn_trialNum_3, alienBodyLearn2, alienEyeLearn2, explorerLearn2, health_border_3, health_fill_3]
         for thisComponent in learning_feedbackComponents:
@@ -6063,7 +6069,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         alienEyeLearn3.setOri(learn_ori_val)
         alienEyeLearn3.setSF(learn_freq_val)
         explorerLearn3.setPos((learn_explor_pos_LR, learn_explor_pos_UD))
-        health_fill_4.setSize((0.08, (.5*health_modifier)))
+        health_fill_4.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_feedback_labelComponents = [trainingLabelLearn, learn_label_trigs, learn_trialNum_4, alienBodyLearn3, alienEyeLearn3, explorerLearn3, health_border_4, health_fill_4]
         for thisComponent in learning_feedback_labelComponents:
@@ -6362,7 +6368,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         learning_blink_key.keys = []
         learning_blink_key.rt = []
         _learning_blink_key_allKeys = []
-        health_fill_5.setSize((0.08, (.5*health_modifier)))
+        health_fill_5.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
         learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs, health_border_5, health_fill_5]
         for thisComponent in learning_blinkComponents:
