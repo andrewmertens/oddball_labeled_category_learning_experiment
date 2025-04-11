@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 11, 2025, at 13:48
+    on April 11, 2025, at 15:36
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -761,20 +761,29 @@ learning_text_regen = visual.TextStim(win=win, name='learning_text_regen',
     depth=-4.0);
 
 # --- Initialize components for Routine "learning_blink" ---
+# Run 'Begin Experiment' code from backmask_noise_code
+noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0
 learn_trialNum_5 = visual.TextStim(win=win, name='learn_trialNum_5',
     text='',
     font='Open Sans',
     pos=(0, .4), height=textH, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 learning_blink_text = visual.TextStim(win=win, name='learning_blink_text',
     text='You can blink now!\nPress the spacebar to continue.',
     font='Open Sans',
-    units='height', pos=(0, .1), height=textH, wrapWidth=None, ori=0.0, 
+    units='height', pos=(0, -.1), height=textH, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
+noise_backmask = visual.GratingStim(
+    win=win, name='noise_backmask',
+    tex=noiseTexture, mask='circle', anchor='center',
+    ori=0.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
+    color=[1,1,1], colorSpace='rgb',
+    opacity=None, contrast=0.5, blendmode='avg',
+    texRes=128.0, interpolate=True, depth=-3.0)
 learning_blink_key = keyboard.Keyboard()
 
 # point learn_blink_trigs to device at port 'COM4' and make sure it's open
@@ -787,13 +796,13 @@ health_border_5 = visual.Rect(
     width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
     ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-4.0, interpolate=True)
+    opacity=None, depth=-6.0, interpolate=True)
 health_fill_5 = visual.Rect(
     win=win, name='health_fill_5',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
     ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
-    opacity=None, depth=-5.0, interpolate=True)
+    opacity=None, depth=-7.0, interpolate=True)
 
 # --- Initialize components for Routine "learning1_break1" ---
 learn1_break1_text = visual.TextStim(win=win, name='learn1_break1_text',
@@ -1104,20 +1113,29 @@ learning_text_regen = visual.TextStim(win=win, name='learning_text_regen',
     depth=-4.0);
 
 # --- Initialize components for Routine "learning_blink" ---
+# Run 'Begin Experiment' code from backmask_noise_code
+noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0
 learn_trialNum_5 = visual.TextStim(win=win, name='learn_trialNum_5',
     text='',
     font='Open Sans',
     pos=(0, .4), height=textH, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 learning_blink_text = visual.TextStim(win=win, name='learning_blink_text',
     text='You can blink now!\nPress the spacebar to continue.',
     font='Open Sans',
-    units='height', pos=(0, .1), height=textH, wrapWidth=None, ori=0.0, 
+    units='height', pos=(0, -.1), height=textH, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
+noise_backmask = visual.GratingStim(
+    win=win, name='noise_backmask',
+    tex=noiseTexture, mask='circle', anchor='center',
+    ori=0.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
+    color=[1,1,1], colorSpace='rgb',
+    opacity=None, contrast=0.5, blendmode='avg',
+    texRes=128.0, interpolate=True, depth=-3.0)
 learning_blink_key = keyboard.Keyboard()
 
 # point learn_blink_trigs to device at port 'COM4' and make sure it's open
@@ -1130,13 +1148,13 @@ health_border_5 = visual.Rect(
     width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
     ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-4.0, interpolate=True)
+    opacity=None, depth=-6.0, interpolate=True)
 health_fill_5 = visual.Rect(
     win=win, name='health_fill_5',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
     ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
-    opacity=None, depth=-5.0, interpolate=True)
+    opacity=None, depth=-7.0, interpolate=True)
 
 # --- Initialize components for Routine "learning2_break1" ---
 learn2_break1_text = visual.TextStim(win=win, name='learn2_break1_text',
@@ -1530,7 +1548,7 @@ frameN = -1
 
 # --- Run Routine "resting_closed" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 1.0:
+while continueRoutine and routineTimer.getTime() < 30.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1561,7 +1579,7 @@ while continueRoutine and routineTimer.getTime() < 1.0:
     # if resting_closed_photobox_pre is stopping this frame...
     if resting_closed_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 30-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_closed_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1588,7 +1606,7 @@ while continueRoutine and routineTimer.getTime() < 1.0:
     # if resting_closed_trigs_pre is stopping this frame...
     if resting_closed_trigs_pre.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > 0.9-frameTolerance:
+        if tThisFlip > 29.9-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_trigs_pre.tStop = t  # not accounting for scr refresh
             resting_closed_trigs_pre.frameNStop = frameN  # exact frame index
@@ -1625,7 +1643,7 @@ for thisComponent in resting_closedComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-1.000000)
+    routineTimer.addTime(-30.000000)
 
 # --- Prepare to start Routine "resting_instructions_2" ---
 continueRoutine = True
@@ -1784,7 +1802,7 @@ frameN = -1
 
 # --- Run Routine "resting_open" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 1.0:
+while continueRoutine and routineTimer.getTime() < 30.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1815,7 +1833,7 @@ while continueRoutine and routineTimer.getTime() < 1.0:
     # if resting_open_photobox_pre is stopping this frame...
     if resting_open_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 30-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_open_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1842,7 +1860,7 @@ while continueRoutine and routineTimer.getTime() < 1.0:
     # if resting_open_trigs is stopping this frame...
     if resting_open_trigs.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > 0.9-frameTolerance:
+        if tThisFlip > 29.9-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_trigs.tStop = t  # not accounting for scr refresh
             resting_open_trigs.frameNStop = frameN  # exact frame index
@@ -1879,7 +1897,7 @@ for thisComponent in resting_openComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-1.000000)
+    routineTimer.addTime(-30.000000)
 
 # --- Prepare to start Routine "learning_instructions0" ---
 continueRoutine = True
@@ -3162,7 +3180,7 @@ while continueRoutine:
     waitOnFlip = False
     
     # if health_instructions_keys_1 is starting this frame...
-    if health_instructions_keys_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    if health_instructions_keys_1.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
         # keep track of start time/frame for later
         health_instructions_keys_1.frameNStart = frameN  # exact frame index
         health_instructions_keys_1.tStart = t  # local t and not account for scr refresh
@@ -3339,7 +3357,7 @@ while continueRoutine:
     waitOnFlip = False
     
     # if health_instructions_keys_2 is starting this frame...
-    if health_instructions_keys_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    if health_instructions_keys_2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
         # keep track of start time/frame for later
         health_instructions_keys_2.frameNStart = frameN  # exact frame index
         health_instructions_keys_2.tStart = t  # local t and not account for scr refresh
@@ -5068,12 +5086,13 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         continueRoutine = True
         # update component parameters for each repeat
         learn_trialNum_5.setText(learn_trial_nums)
+        noise_backmask.setSF(0.5)
         learning_blink_key.keys = []
         learning_blink_key.rt = []
         _learning_blink_key_allKeys = []
         health_fill_5.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
-        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs, health_border_5, health_fill_5]
+        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, noise_backmask, learning_blink_key, learn_blink_trigs, health_border_5, health_fill_5]
         for thisComponent in learning_blinkComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -5095,6 +5114,8 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from backmask_noise_code
+            noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0
             
             # *learn_trialNum_5* updates
             
@@ -5136,11 +5157,44 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
                 # update params
                 pass
             
+            # *noise_backmask* updates
+            
+            # if noise_backmask is starting this frame...
+            if noise_backmask.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                # keep track of start time/frame for later
+                noise_backmask.frameNStart = frameN  # exact frame index
+                noise_backmask.tStart = t  # local t and not account for scr refresh
+                noise_backmask.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(noise_backmask, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'noise_backmask.started')
+                # update status
+                noise_backmask.status = STARTED
+                noise_backmask.setAutoDraw(True)
+            
+            # if noise_backmask is active this frame...
+            if noise_backmask.status == STARTED:
+                # update params
+                noise_backmask.setTex(noiseTexture, log=False)
+            
+            # if noise_backmask is stopping this frame...
+            if noise_backmask.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > noise_backmask.tStartRefresh + .5-frameTolerance:
+                    # keep track of stop time/frame for later
+                    noise_backmask.tStop = t  # not accounting for scr refresh
+                    noise_backmask.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'noise_backmask.stopped')
+                    # update status
+                    noise_backmask.status = FINISHED
+                    noise_backmask.setAutoDraw(False)
+            
             # *learning_blink_key* updates
             waitOnFlip = False
             
             # if learning_blink_key is starting this frame...
-            if learning_blink_key.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            if learning_blink_key.status == NOT_STARTED and tThisFlip >= .5-frameTolerance:
                 # keep track of start time/frame for later
                 learning_blink_key.frameNStart = frameN  # exact frame index
                 learning_blink_key.tStart = t  # local t and not account for scr refresh
@@ -7243,12 +7297,13 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         continueRoutine = True
         # update component parameters for each repeat
         learn_trialNum_5.setText(learn_trial_nums)
+        noise_backmask.setSF(0.5)
         learning_blink_key.keys = []
         learning_blink_key.rt = []
         _learning_blink_key_allKeys = []
         health_fill_5.setSize((healthbarW, (healthbarH*health_modifier)))
         # keep track of which components have finished
-        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, learning_blink_key, learn_blink_trigs, health_border_5, health_fill_5]
+        learning_blinkComponents = [learn_trialNum_5, learning_blink_text, noise_backmask, learning_blink_key, learn_blink_trigs, health_border_5, health_fill_5]
         for thisComponent in learning_blinkComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -7270,6 +7325,8 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from backmask_noise_code
+            noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0
             
             # *learn_trialNum_5* updates
             
@@ -7311,11 +7368,44 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
                 # update params
                 pass
             
+            # *noise_backmask* updates
+            
+            # if noise_backmask is starting this frame...
+            if noise_backmask.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                # keep track of start time/frame for later
+                noise_backmask.frameNStart = frameN  # exact frame index
+                noise_backmask.tStart = t  # local t and not account for scr refresh
+                noise_backmask.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(noise_backmask, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'noise_backmask.started')
+                # update status
+                noise_backmask.status = STARTED
+                noise_backmask.setAutoDraw(True)
+            
+            # if noise_backmask is active this frame...
+            if noise_backmask.status == STARTED:
+                # update params
+                noise_backmask.setTex(noiseTexture, log=False)
+            
+            # if noise_backmask is stopping this frame...
+            if noise_backmask.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > noise_backmask.tStartRefresh + .5-frameTolerance:
+                    # keep track of stop time/frame for later
+                    noise_backmask.tStop = t  # not accounting for scr refresh
+                    noise_backmask.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'noise_backmask.stopped')
+                    # update status
+                    noise_backmask.status = FINISHED
+                    noise_backmask.setAutoDraw(False)
+            
             # *learning_blink_key* updates
             waitOnFlip = False
             
             # if learning_blink_key is starting this frame...
-            if learning_blink_key.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            if learning_blink_key.status == NOT_STARTED and tThisFlip >= .5-frameTolerance:
                 # keep track of start time/frame for later
                 learning_blink_key.frameNStart = frameN  # exact frame index
                 learning_blink_key.tStart = t  # local t and not account for scr refresh
