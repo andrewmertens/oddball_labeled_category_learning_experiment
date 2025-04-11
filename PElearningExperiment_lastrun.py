@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 09, 2025, at 17:39
+    on April 11, 2025, at 13:48
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -141,29 +141,6 @@ record_reminder_text = visual.TextStim(win=win, name='record_reminder_text',
     languageStyle='LTR',
     depth=-1.0);
 record_reminder_key = keyboard.Keyboard()
-
-# --- Initialize components for Routine "TEST_DELETE" ---
-explorerLearn4_2 = visual.ImageStim(
-    win=win,
-    name='explorerLearn4_2', 
-    image='stimuli/spaceExplorer2.png', mask=None, anchor='center',
-    ori=0.0, pos=(-.2, 0), size=[explW, explH],
-    color=[1,1,1], colorSpace='rgb', opacity=None,
-    flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=0.0)
-health_border_6 = visual.Rect(
-    win=win, name='health_border_6',
-    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
-    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
-    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
-    opacity=None, depth=-1.0, interpolate=True)
-learning_regen_text_2 = visual.TextStim(win=win, name='learning_regen_text_2',
-    text='The explorer has low health and needs to rest before continuing.\nPlease wait.',
-    font='Open Sans',
-    pos=(.1, 0), height=textH, wrapWidth=0.4, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-2.0);
 
 # --- Initialize components for Routine "resting_instructions_1" ---
 rest_instructions_close_pre = visual.TextStim(win=win, name='rest_instructions_close_pre',
@@ -458,6 +435,66 @@ learn_instruction_trigs_5.status = NOT_STARTED
 if not learn_instruction_trigs_5.is_open:
     learn_instruction_trigs_5.open()
 
+# --- Initialize components for Routine "learning_healthbar_instructions1" ---
+health_border_instructions_1 = visual.Rect(
+    win=win, name='health_border_instructions_1',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-1.0, interpolate=True)
+health_fill_instructions_1 = visual.Rect(
+    win=win, name='health_fill_instructions_1',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-2.0, interpolate=True)
+health_instructions_explorer_1 = visual.ImageStim(
+    win=win,
+    name='health_instructions_explorer_1', 
+    image='stimuli/spaceExplorer2.png', mask=None, anchor='center',
+    ori=0.0, pos=(-.2, 0), size=[explW, explH],
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-3.0)
+health_instructions_text_1 = visual.TextStim(win=win, name='health_instructions_text_1',
+    text="Additionally, your explorer's health is represented by this red health bar. Every time you make an incorrect response, the explorer's health will decrease.\n\nPress the spacebar to continue.",
+    font='Open Sans',
+    pos=(.1, 0), height=textH, wrapWidth=0.4, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+health_instructions_keys_1 = keyboard.Keyboard()
+
+# --- Initialize components for Routine "learning_healthbar_instructions2" ---
+health_border_instructions_2 = visual.Rect(
+    win=win, name='health_border_instructions_2',
+    width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
+    lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
+    opacity=None, depth=-1.0, interpolate=True)
+health_fill_instructions_2 = visual.Rect(
+    win=win, name='health_fill_instructions_2',
+    width=[1.0, 1.0][0], height=[1.0, 1.0][1],
+    ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
+    lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
+    opacity=None, depth=-2.0, interpolate=True)
+health_instructions_explorer_2 = visual.ImageStim(
+    win=win,
+    name='health_instructions_explorer_2', 
+    image='stimuli/spaceExplorer2.png', mask=None, anchor='center',
+    ori=0.0, pos=(-.2, 0), size=[explW, explH],
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-3.0)
+health_instructions_text_2 = visual.TextStim(win=win, name='health_instructions_text_2',
+    text="Don't worry if your explorer's health runs out! If this happens, your explorer will just need to rest for 10 seconds before continuing.\n\nPress the spacebar to continue.",
+    font='Open Sans',
+    pos=(.1, 0), height=textH, wrapWidth=0.4, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+health_instructions_keys_2 = keyboard.Keyboard()
+
 # --- Initialize components for Routine "learning_label_instructions" ---
 learning_label_instruction_text = visual.TextStim(win=win, name='learning_label_instruction_text',
     text='Previous explorers have given names to the two species: Gowachi and Havnori. You will hear the name of the species of each alien you view in addition to the feedback sounds. Press the spacebar to continue.',
@@ -703,22 +740,22 @@ explorerLearn4 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
-health_border = visual.Rect(
-    win=win, name='health_border',
+health_border_regen = visual.Rect(
+    win=win, name='health_border_regen',
     width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
     ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-2.0, interpolate=True)
-health_fill = visual.Rect(
-    win=win, name='health_fill',
+health_fill_regen = visual.Rect(
+    win=win, name='health_fill_regen',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
     ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-3.0, interpolate=True)
-learning_regen_text = visual.TextStim(win=win, name='learning_regen_text',
+learning_text_regen = visual.TextStim(win=win, name='learning_text_regen',
     text='The explorer has low health and needs to rest before continuing.\nPlease wait.',
     font='Open Sans',
-    pos=(.1, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    pos=(.1, 0), height=textH, wrapWidth=0.4, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-4.0);
@@ -1046,22 +1083,22 @@ explorerLearn4 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
-health_border = visual.Rect(
-    win=win, name='health_border',
+health_border_regen = visual.Rect(
+    win=win, name='health_border_regen',
     width=(healthbarW, healthbarH)[0], height=(healthbarW, healthbarH)[1],
     ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=4.0,     colorSpace='rgb',  lineColor=[0.3961, -0.7333, -0.7333], fillColor=[0.0000, 0.0000, 0.0000],
     opacity=None, depth=-2.0, interpolate=True)
-health_fill = visual.Rect(
-    win=win, name='health_fill',
+health_fill_regen = visual.Rect(
+    win=win, name='health_fill_regen',
     width=[1.0, 1.0][0], height=[1.0, 1.0][1],
     ori=0.0, pos=(healthbarPosH, healthbarPosV), anchor='bottom-left',
     lineWidth=0.0,     colorSpace='rgb',  lineColor=[0.0000, 0.0000, 0.0000], fillColor=[0.3961, -0.7333, -0.7333],
     opacity=None, depth=-3.0, interpolate=True)
-learning_regen_text = visual.TextStim(win=win, name='learning_regen_text',
+learning_text_regen = visual.TextStim(win=win, name='learning_text_regen',
     text='The explorer has low health and needs to rest before continuing.\nPlease wait.',
     font='Open Sans',
-    pos=(.1, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    pos=(.1, 0), height=textH, wrapWidth=0.4, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-4.0);
@@ -1364,160 +1401,6 @@ if record_reminder_key.keys != None:  # we had a response
 thisExp.nextEntry()
 # the Routine "record_reminder" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
-
-# --- Prepare to start Routine "TEST_DELETE" ---
-continueRoutine = True
-# update component parameters for each repeat
-# keep track of which components have finished
-TEST_DELETEComponents = [explorerLearn4_2, health_border_6, learning_regen_text_2]
-for thisComponent in TEST_DELETEComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-frameN = -1
-
-# --- Run Routine "TEST_DELETE" ---
-routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 10.0:
-    # get current time
-    t = routineTimer.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *explorerLearn4_2* updates
-    
-    # if explorerLearn4_2 is starting this frame...
-    if explorerLearn4_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-        # keep track of start time/frame for later
-        explorerLearn4_2.frameNStart = frameN  # exact frame index
-        explorerLearn4_2.tStart = t  # local t and not account for scr refresh
-        explorerLearn4_2.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(explorerLearn4_2, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'explorerLearn4_2.started')
-        # update status
-        explorerLearn4_2.status = STARTED
-        explorerLearn4_2.setAutoDraw(True)
-    
-    # if explorerLearn4_2 is active this frame...
-    if explorerLearn4_2.status == STARTED:
-        # update params
-        pass
-    
-    # if explorerLearn4_2 is stopping this frame...
-    if explorerLearn4_2.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > explorerLearn4_2.tStartRefresh + 10-frameTolerance:
-            # keep track of stop time/frame for later
-            explorerLearn4_2.tStop = t  # not accounting for scr refresh
-            explorerLearn4_2.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'explorerLearn4_2.stopped')
-            # update status
-            explorerLearn4_2.status = FINISHED
-            explorerLearn4_2.setAutoDraw(False)
-    
-    # *health_border_6* updates
-    
-    # if health_border_6 is starting this frame...
-    if health_border_6.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-        # keep track of start time/frame for later
-        health_border_6.frameNStart = frameN  # exact frame index
-        health_border_6.tStart = t  # local t and not account for scr refresh
-        health_border_6.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(health_border_6, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'health_border_6.started')
-        # update status
-        health_border_6.status = STARTED
-        health_border_6.setAutoDraw(True)
-    
-    # if health_border_6 is active this frame...
-    if health_border_6.status == STARTED:
-        # update params
-        pass
-    
-    # if health_border_6 is stopping this frame...
-    if health_border_6.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > health_border_6.tStartRefresh + 10-frameTolerance:
-            # keep track of stop time/frame for later
-            health_border_6.tStop = t  # not accounting for scr refresh
-            health_border_6.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'health_border_6.stopped')
-            # update status
-            health_border_6.status = FINISHED
-            health_border_6.setAutoDraw(False)
-    
-    # *learning_regen_text_2* updates
-    
-    # if learning_regen_text_2 is starting this frame...
-    if learning_regen_text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        learning_regen_text_2.frameNStart = frameN  # exact frame index
-        learning_regen_text_2.tStart = t  # local t and not account for scr refresh
-        learning_regen_text_2.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(learning_regen_text_2, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'learning_regen_text_2.started')
-        # update status
-        learning_regen_text_2.status = STARTED
-        learning_regen_text_2.setAutoDraw(True)
-    
-    # if learning_regen_text_2 is active this frame...
-    if learning_regen_text_2.status == STARTED:
-        # update params
-        pass
-    
-    # if learning_regen_text_2 is stopping this frame...
-    if learning_regen_text_2.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > learning_regen_text_2.tStartRefresh + 10-frameTolerance:
-            # keep track of stop time/frame for later
-            learning_regen_text_2.tStop = t  # not accounting for scr refresh
-            learning_regen_text_2.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'learning_regen_text_2.stopped')
-            # update status
-            learning_regen_text_2.status = FINISHED
-            learning_regen_text_2.setAutoDraw(False)
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        routineForceEnded = True
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in TEST_DELETEComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# --- Ending Routine "TEST_DELETE" ---
-for thisComponent in TEST_DELETEComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-# using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-if routineForceEnded:
-    routineTimer.reset()
-else:
-    routineTimer.addTime(-10.000000)
 
 # --- Prepare to start Routine "resting_instructions_1" ---
 continueRoutine = True
@@ -3159,6 +3042,358 @@ incorrect_tone_instructions.stop()  # ensure sound has stopped at end of routine
 # the Routine "learning_instructions5" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
+# --- Prepare to start Routine "learning_healthbar_instructions1" ---
+continueRoutine = True
+# update component parameters for each repeat
+# Run 'Begin Routine' code from health_instructions_code_1
+health_inst_timer = core.Clock()
+health_instructions_keys_1.keys = []
+health_instructions_keys_1.rt = []
+_health_instructions_keys_1_allKeys = []
+# keep track of which components have finished
+learning_healthbar_instructions1Components = [health_border_instructions_1, health_fill_instructions_1, health_instructions_explorer_1, health_instructions_text_1, health_instructions_keys_1]
+for thisComponent in learning_healthbar_instructions1Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+frameN = -1
+
+# --- Run Routine "learning_healthbar_instructions1" ---
+routineForceEnded = not continueRoutine
+while continueRoutine:
+    # get current time
+    t = routineTimer.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    # Run 'Each Frame' code from health_instructions_code_1
+    curr_health_inst_time = round(health_inst_timer.getTime())
+    health_score_inst = 19 + (curr_health_inst_time % 2) #alternates between 1 and 0 based on timer in 1 sec increments
+    health_modifier_inst = health_score_inst/full_health_score
+    
+    # *health_border_instructions_1* updates
+    
+    # if health_border_instructions_1 is starting this frame...
+    if health_border_instructions_1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # keep track of start time/frame for later
+        health_border_instructions_1.frameNStart = frameN  # exact frame index
+        health_border_instructions_1.tStart = t  # local t and not account for scr refresh
+        health_border_instructions_1.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_border_instructions_1, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_border_instructions_1.started')
+        # update status
+        health_border_instructions_1.status = STARTED
+        health_border_instructions_1.setAutoDraw(True)
+    
+    # if health_border_instructions_1 is active this frame...
+    if health_border_instructions_1.status == STARTED:
+        # update params
+        pass
+    
+    # *health_fill_instructions_1* updates
+    
+    # if health_fill_instructions_1 is starting this frame...
+    if health_fill_instructions_1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # keep track of start time/frame for later
+        health_fill_instructions_1.frameNStart = frameN  # exact frame index
+        health_fill_instructions_1.tStart = t  # local t and not account for scr refresh
+        health_fill_instructions_1.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_fill_instructions_1, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_fill_instructions_1.started')
+        # update status
+        health_fill_instructions_1.status = STARTED
+        health_fill_instructions_1.setAutoDraw(True)
+    
+    # if health_fill_instructions_1 is active this frame...
+    if health_fill_instructions_1.status == STARTED:
+        # update params
+        health_fill_instructions_1.setSize((healthbarW, (healthbarH*health_modifier_inst)), log=False)
+    
+    # *health_instructions_explorer_1* updates
+    
+    # if health_instructions_explorer_1 is starting this frame...
+    if health_instructions_explorer_1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # keep track of start time/frame for later
+        health_instructions_explorer_1.frameNStart = frameN  # exact frame index
+        health_instructions_explorer_1.tStart = t  # local t and not account for scr refresh
+        health_instructions_explorer_1.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_instructions_explorer_1, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_instructions_explorer_1.started')
+        # update status
+        health_instructions_explorer_1.status = STARTED
+        health_instructions_explorer_1.setAutoDraw(True)
+    
+    # if health_instructions_explorer_1 is active this frame...
+    if health_instructions_explorer_1.status == STARTED:
+        # update params
+        pass
+    
+    # *health_instructions_text_1* updates
+    
+    # if health_instructions_text_1 is starting this frame...
+    if health_instructions_text_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        health_instructions_text_1.frameNStart = frameN  # exact frame index
+        health_instructions_text_1.tStart = t  # local t and not account for scr refresh
+        health_instructions_text_1.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_instructions_text_1, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_instructions_text_1.started')
+        # update status
+        health_instructions_text_1.status = STARTED
+        health_instructions_text_1.setAutoDraw(True)
+    
+    # if health_instructions_text_1 is active this frame...
+    if health_instructions_text_1.status == STARTED:
+        # update params
+        pass
+    
+    # *health_instructions_keys_1* updates
+    waitOnFlip = False
+    
+    # if health_instructions_keys_1 is starting this frame...
+    if health_instructions_keys_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        health_instructions_keys_1.frameNStart = frameN  # exact frame index
+        health_instructions_keys_1.tStart = t  # local t and not account for scr refresh
+        health_instructions_keys_1.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_instructions_keys_1, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_instructions_keys_1.started')
+        # update status
+        health_instructions_keys_1.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(health_instructions_keys_1.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(health_instructions_keys_1.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if health_instructions_keys_1.status == STARTED and not waitOnFlip:
+        theseKeys = health_instructions_keys_1.getKeys(keyList=['space'], waitRelease=False)
+        _health_instructions_keys_1_allKeys.extend(theseKeys)
+        if len(_health_instructions_keys_1_allKeys):
+            health_instructions_keys_1.keys = _health_instructions_keys_1_allKeys[-1].name  # just the last key pressed
+            health_instructions_keys_1.rt = _health_instructions_keys_1_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        routineForceEnded = True
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in learning_healthbar_instructions1Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# --- Ending Routine "learning_healthbar_instructions1" ---
+for thisComponent in learning_healthbar_instructions1Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if health_instructions_keys_1.keys in ['', [], None]:  # No response was made
+    health_instructions_keys_1.keys = None
+thisExp.addData('health_instructions_keys_1.keys',health_instructions_keys_1.keys)
+if health_instructions_keys_1.keys != None:  # we had a response
+    thisExp.addData('health_instructions_keys_1.rt', health_instructions_keys_1.rt)
+thisExp.nextEntry()
+# the Routine "learning_healthbar_instructions1" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# --- Prepare to start Routine "learning_healthbar_instructions2" ---
+continueRoutine = True
+# update component parameters for each repeat
+# Run 'Begin Routine' code from health_instructions_code_2
+health_inst_timer.reset()
+health_instructions_keys_2.keys = []
+health_instructions_keys_2.rt = []
+_health_instructions_keys_2_allKeys = []
+# keep track of which components have finished
+learning_healthbar_instructions2Components = [health_border_instructions_2, health_fill_instructions_2, health_instructions_explorer_2, health_instructions_text_2, health_instructions_keys_2]
+for thisComponent in learning_healthbar_instructions2Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+frameN = -1
+
+# --- Run Routine "learning_healthbar_instructions2" ---
+routineForceEnded = not continueRoutine
+while continueRoutine:
+    # get current time
+    t = routineTimer.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    # Run 'Each Frame' code from health_instructions_code_2
+    if round(health_inst_timer.getTime()) >= 11:
+        health_inst_timer.reset()
+    
+    health_score_inst = round(health_inst_timer.getTime())
+    health_modifier_inst = health_score_inst/full_health_score
+    
+    # *health_border_instructions_2* updates
+    
+    # if health_border_instructions_2 is starting this frame...
+    if health_border_instructions_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # keep track of start time/frame for later
+        health_border_instructions_2.frameNStart = frameN  # exact frame index
+        health_border_instructions_2.tStart = t  # local t and not account for scr refresh
+        health_border_instructions_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_border_instructions_2, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_border_instructions_2.started')
+        # update status
+        health_border_instructions_2.status = STARTED
+        health_border_instructions_2.setAutoDraw(True)
+    
+    # if health_border_instructions_2 is active this frame...
+    if health_border_instructions_2.status == STARTED:
+        # update params
+        pass
+    
+    # *health_fill_instructions_2* updates
+    
+    # if health_fill_instructions_2 is starting this frame...
+    if health_fill_instructions_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # keep track of start time/frame for later
+        health_fill_instructions_2.frameNStart = frameN  # exact frame index
+        health_fill_instructions_2.tStart = t  # local t and not account for scr refresh
+        health_fill_instructions_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_fill_instructions_2, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_fill_instructions_2.started')
+        # update status
+        health_fill_instructions_2.status = STARTED
+        health_fill_instructions_2.setAutoDraw(True)
+    
+    # if health_fill_instructions_2 is active this frame...
+    if health_fill_instructions_2.status == STARTED:
+        # update params
+        health_fill_instructions_2.setSize((healthbarW, (healthbarH*health_modifier_inst)), log=False)
+    
+    # *health_instructions_explorer_2* updates
+    
+    # if health_instructions_explorer_2 is starting this frame...
+    if health_instructions_explorer_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # keep track of start time/frame for later
+        health_instructions_explorer_2.frameNStart = frameN  # exact frame index
+        health_instructions_explorer_2.tStart = t  # local t and not account for scr refresh
+        health_instructions_explorer_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_instructions_explorer_2, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_instructions_explorer_2.started')
+        # update status
+        health_instructions_explorer_2.status = STARTED
+        health_instructions_explorer_2.setAutoDraw(True)
+    
+    # if health_instructions_explorer_2 is active this frame...
+    if health_instructions_explorer_2.status == STARTED:
+        # update params
+        pass
+    
+    # *health_instructions_text_2* updates
+    
+    # if health_instructions_text_2 is starting this frame...
+    if health_instructions_text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        health_instructions_text_2.frameNStart = frameN  # exact frame index
+        health_instructions_text_2.tStart = t  # local t and not account for scr refresh
+        health_instructions_text_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_instructions_text_2, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_instructions_text_2.started')
+        # update status
+        health_instructions_text_2.status = STARTED
+        health_instructions_text_2.setAutoDraw(True)
+    
+    # if health_instructions_text_2 is active this frame...
+    if health_instructions_text_2.status == STARTED:
+        # update params
+        pass
+    
+    # *health_instructions_keys_2* updates
+    waitOnFlip = False
+    
+    # if health_instructions_keys_2 is starting this frame...
+    if health_instructions_keys_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        health_instructions_keys_2.frameNStart = frameN  # exact frame index
+        health_instructions_keys_2.tStart = t  # local t and not account for scr refresh
+        health_instructions_keys_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(health_instructions_keys_2, 'tStartRefresh')  # time at next scr refresh
+        # add timestamp to datafile
+        thisExp.timestampOnFlip(win, 'health_instructions_keys_2.started')
+        # update status
+        health_instructions_keys_2.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(health_instructions_keys_2.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(health_instructions_keys_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if health_instructions_keys_2.status == STARTED and not waitOnFlip:
+        theseKeys = health_instructions_keys_2.getKeys(keyList=['space'], waitRelease=False)
+        _health_instructions_keys_2_allKeys.extend(theseKeys)
+        if len(_health_instructions_keys_2_allKeys):
+            health_instructions_keys_2.keys = _health_instructions_keys_2_allKeys[-1].name  # just the last key pressed
+            health_instructions_keys_2.rt = _health_instructions_keys_2_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        routineForceEnded = True
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in learning_healthbar_instructions2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# --- Ending Routine "learning_healthbar_instructions2" ---
+for thisComponent in learning_healthbar_instructions2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if health_instructions_keys_2.keys in ['', [], None]:  # No response was made
+    health_instructions_keys_2.keys = None
+thisExp.addData('health_instructions_keys_2.keys',health_instructions_keys_2.keys)
+if health_instructions_keys_2.keys != None:  # we had a response
+    thisExp.addData('health_instructions_keys_2.rt', health_instructions_keys_2.rt)
+thisExp.nextEntry()
+# the Routine "learning_healthbar_instructions2" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
 # --- Prepare to start Routine "learning_label_instructions" ---
 continueRoutine = True
 # update component parameters for each repeat
@@ -4636,7 +4871,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             has_health = False
             regen_timer = core.Clock()
         # keep track of which components have finished
-        learning_regenComponents = [explorerLearn4, health_border, health_fill, learning_regen_text]
+        learning_regenComponents = [explorerLearn4, health_border_regen, health_fill_regen, learning_text_regen]
         for thisComponent in learning_regenComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -4697,104 +4932,104 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
                     explorerLearn4.status = FINISHED
                     explorerLearn4.setAutoDraw(False)
             
-            # *health_border* updates
+            # *health_border_regen* updates
             
-            # if health_border is starting this frame...
-            if health_border.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if health_border_regen is starting this frame...
+            if health_border_regen.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
-                health_border.frameNStart = frameN  # exact frame index
-                health_border.tStart = t  # local t and not account for scr refresh
-                health_border.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(health_border, 'tStartRefresh')  # time at next scr refresh
+                health_border_regen.frameNStart = frameN  # exact frame index
+                health_border_regen.tStart = t  # local t and not account for scr refresh
+                health_border_regen.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_regen, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'health_border.started')
+                thisExp.timestampOnFlip(win, 'health_border_regen.started')
                 # update status
-                health_border.status = STARTED
-                health_border.setAutoDraw(True)
+                health_border_regen.status = STARTED
+                health_border_regen.setAutoDraw(True)
             
-            # if health_border is active this frame...
-            if health_border.status == STARTED:
+            # if health_border_regen is active this frame...
+            if health_border_regen.status == STARTED:
                 # update params
                 pass
             
-            # if health_border is stopping this frame...
-            if health_border.status == STARTED:
+            # if health_border_regen is stopping this frame...
+            if health_border_regen.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > health_border.tStartRefresh + 10-frameTolerance:
+                if tThisFlipGlobal > health_border_regen.tStartRefresh + 10-frameTolerance:
                     # keep track of stop time/frame for later
-                    health_border.tStop = t  # not accounting for scr refresh
-                    health_border.frameNStop = frameN  # exact frame index
+                    health_border_regen.tStop = t  # not accounting for scr refresh
+                    health_border_regen.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'health_border.stopped')
+                    thisExp.timestampOnFlip(win, 'health_border_regen.stopped')
                     # update status
-                    health_border.status = FINISHED
-                    health_border.setAutoDraw(False)
+                    health_border_regen.status = FINISHED
+                    health_border_regen.setAutoDraw(False)
             
-            # *health_fill* updates
+            # *health_fill_regen* updates
             
-            # if health_fill is starting this frame...
-            if health_fill.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if health_fill_regen is starting this frame...
+            if health_fill_regen.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
-                health_fill.frameNStart = frameN  # exact frame index
-                health_fill.tStart = t  # local t and not account for scr refresh
-                health_fill.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(health_fill, 'tStartRefresh')  # time at next scr refresh
+                health_fill_regen.frameNStart = frameN  # exact frame index
+                health_fill_regen.tStart = t  # local t and not account for scr refresh
+                health_fill_regen.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_regen, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'health_fill.started')
+                thisExp.timestampOnFlip(win, 'health_fill_regen.started')
                 # update status
-                health_fill.status = STARTED
-                health_fill.setAutoDraw(True)
+                health_fill_regen.status = STARTED
+                health_fill_regen.setAutoDraw(True)
             
-            # if health_fill is active this frame...
-            if health_fill.status == STARTED:
+            # if health_fill_regen is active this frame...
+            if health_fill_regen.status == STARTED:
                 # update params
-                health_fill.setSize((healthbarW, (healthbarH*health_modifier)), log=False)
+                health_fill_regen.setSize((healthbarW, (healthbarH*health_modifier)), log=False)
             
-            # if health_fill is stopping this frame...
-            if health_fill.status == STARTED:
+            # if health_fill_regen is stopping this frame...
+            if health_fill_regen.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > health_fill.tStartRefresh + 10-frameTolerance:
+                if tThisFlipGlobal > health_fill_regen.tStartRefresh + 10-frameTolerance:
                     # keep track of stop time/frame for later
-                    health_fill.tStop = t  # not accounting for scr refresh
-                    health_fill.frameNStop = frameN  # exact frame index
+                    health_fill_regen.tStop = t  # not accounting for scr refresh
+                    health_fill_regen.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'health_fill.stopped')
+                    thisExp.timestampOnFlip(win, 'health_fill_regen.stopped')
                     # update status
-                    health_fill.status = FINISHED
-                    health_fill.setAutoDraw(False)
+                    health_fill_regen.status = FINISHED
+                    health_fill_regen.setAutoDraw(False)
             
-            # *learning_regen_text* updates
+            # *learning_text_regen* updates
             
-            # if learning_regen_text is starting this frame...
-            if learning_regen_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # if learning_text_regen is starting this frame...
+            if learning_text_regen.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                learning_regen_text.frameNStart = frameN  # exact frame index
-                learning_regen_text.tStart = t  # local t and not account for scr refresh
-                learning_regen_text.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(learning_regen_text, 'tStartRefresh')  # time at next scr refresh
+                learning_text_regen.frameNStart = frameN  # exact frame index
+                learning_text_regen.tStart = t  # local t and not account for scr refresh
+                learning_text_regen.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(learning_text_regen, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'learning_regen_text.started')
+                thisExp.timestampOnFlip(win, 'learning_text_regen.started')
                 # update status
-                learning_regen_text.status = STARTED
-                learning_regen_text.setAutoDraw(True)
+                learning_text_regen.status = STARTED
+                learning_text_regen.setAutoDraw(True)
             
-            # if learning_regen_text is active this frame...
-            if learning_regen_text.status == STARTED:
+            # if learning_text_regen is active this frame...
+            if learning_text_regen.status == STARTED:
                 # update params
                 pass
             
-            # if learning_regen_text is stopping this frame...
-            if learning_regen_text.status == STARTED:
+            # if learning_text_regen is stopping this frame...
+            if learning_text_regen.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > learning_regen_text.tStartRefresh + 10-frameTolerance:
+                if tThisFlipGlobal > learning_text_regen.tStartRefresh + 10-frameTolerance:
                     # keep track of stop time/frame for later
-                    learning_regen_text.tStop = t  # not accounting for scr refresh
-                    learning_regen_text.frameNStop = frameN  # exact frame index
+                    learning_text_regen.tStop = t  # not accounting for scr refresh
+                    learning_text_regen.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'learning_regen_text.stopped')
+                    thisExp.timestampOnFlip(win, 'learning_text_regen.stopped')
                     # update status
-                    learning_regen_text.status = FINISHED
-                    learning_regen_text.setAutoDraw(False)
+                    learning_text_regen.status = FINISHED
+                    learning_text_regen.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -6811,7 +7046,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             has_health = False
             regen_timer = core.Clock()
         # keep track of which components have finished
-        learning_regenComponents = [explorerLearn4, health_border, health_fill, learning_regen_text]
+        learning_regenComponents = [explorerLearn4, health_border_regen, health_fill_regen, learning_text_regen]
         for thisComponent in learning_regenComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -6872,104 +7107,104 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
                     explorerLearn4.status = FINISHED
                     explorerLearn4.setAutoDraw(False)
             
-            # *health_border* updates
+            # *health_border_regen* updates
             
-            # if health_border is starting this frame...
-            if health_border.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if health_border_regen is starting this frame...
+            if health_border_regen.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
-                health_border.frameNStart = frameN  # exact frame index
-                health_border.tStart = t  # local t and not account for scr refresh
-                health_border.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(health_border, 'tStartRefresh')  # time at next scr refresh
+                health_border_regen.frameNStart = frameN  # exact frame index
+                health_border_regen.tStart = t  # local t and not account for scr refresh
+                health_border_regen.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_border_regen, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'health_border.started')
+                thisExp.timestampOnFlip(win, 'health_border_regen.started')
                 # update status
-                health_border.status = STARTED
-                health_border.setAutoDraw(True)
+                health_border_regen.status = STARTED
+                health_border_regen.setAutoDraw(True)
             
-            # if health_border is active this frame...
-            if health_border.status == STARTED:
+            # if health_border_regen is active this frame...
+            if health_border_regen.status == STARTED:
                 # update params
                 pass
             
-            # if health_border is stopping this frame...
-            if health_border.status == STARTED:
+            # if health_border_regen is stopping this frame...
+            if health_border_regen.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > health_border.tStartRefresh + 10-frameTolerance:
+                if tThisFlipGlobal > health_border_regen.tStartRefresh + 10-frameTolerance:
                     # keep track of stop time/frame for later
-                    health_border.tStop = t  # not accounting for scr refresh
-                    health_border.frameNStop = frameN  # exact frame index
+                    health_border_regen.tStop = t  # not accounting for scr refresh
+                    health_border_regen.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'health_border.stopped')
+                    thisExp.timestampOnFlip(win, 'health_border_regen.stopped')
                     # update status
-                    health_border.status = FINISHED
-                    health_border.setAutoDraw(False)
+                    health_border_regen.status = FINISHED
+                    health_border_regen.setAutoDraw(False)
             
-            # *health_fill* updates
+            # *health_fill_regen* updates
             
-            # if health_fill is starting this frame...
-            if health_fill.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if health_fill_regen is starting this frame...
+            if health_fill_regen.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
-                health_fill.frameNStart = frameN  # exact frame index
-                health_fill.tStart = t  # local t and not account for scr refresh
-                health_fill.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(health_fill, 'tStartRefresh')  # time at next scr refresh
+                health_fill_regen.frameNStart = frameN  # exact frame index
+                health_fill_regen.tStart = t  # local t and not account for scr refresh
+                health_fill_regen.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(health_fill_regen, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'health_fill.started')
+                thisExp.timestampOnFlip(win, 'health_fill_regen.started')
                 # update status
-                health_fill.status = STARTED
-                health_fill.setAutoDraw(True)
+                health_fill_regen.status = STARTED
+                health_fill_regen.setAutoDraw(True)
             
-            # if health_fill is active this frame...
-            if health_fill.status == STARTED:
+            # if health_fill_regen is active this frame...
+            if health_fill_regen.status == STARTED:
                 # update params
-                health_fill.setSize((healthbarW, (healthbarH*health_modifier)), log=False)
+                health_fill_regen.setSize((healthbarW, (healthbarH*health_modifier)), log=False)
             
-            # if health_fill is stopping this frame...
-            if health_fill.status == STARTED:
+            # if health_fill_regen is stopping this frame...
+            if health_fill_regen.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > health_fill.tStartRefresh + 10-frameTolerance:
+                if tThisFlipGlobal > health_fill_regen.tStartRefresh + 10-frameTolerance:
                     # keep track of stop time/frame for later
-                    health_fill.tStop = t  # not accounting for scr refresh
-                    health_fill.frameNStop = frameN  # exact frame index
+                    health_fill_regen.tStop = t  # not accounting for scr refresh
+                    health_fill_regen.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'health_fill.stopped')
+                    thisExp.timestampOnFlip(win, 'health_fill_regen.stopped')
                     # update status
-                    health_fill.status = FINISHED
-                    health_fill.setAutoDraw(False)
+                    health_fill_regen.status = FINISHED
+                    health_fill_regen.setAutoDraw(False)
             
-            # *learning_regen_text* updates
+            # *learning_text_regen* updates
             
-            # if learning_regen_text is starting this frame...
-            if learning_regen_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # if learning_text_regen is starting this frame...
+            if learning_text_regen.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                learning_regen_text.frameNStart = frameN  # exact frame index
-                learning_regen_text.tStart = t  # local t and not account for scr refresh
-                learning_regen_text.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(learning_regen_text, 'tStartRefresh')  # time at next scr refresh
+                learning_text_regen.frameNStart = frameN  # exact frame index
+                learning_text_regen.tStart = t  # local t and not account for scr refresh
+                learning_text_regen.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(learning_text_regen, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'learning_regen_text.started')
+                thisExp.timestampOnFlip(win, 'learning_text_regen.started')
                 # update status
-                learning_regen_text.status = STARTED
-                learning_regen_text.setAutoDraw(True)
+                learning_text_regen.status = STARTED
+                learning_text_regen.setAutoDraw(True)
             
-            # if learning_regen_text is active this frame...
-            if learning_regen_text.status == STARTED:
+            # if learning_text_regen is active this frame...
+            if learning_text_regen.status == STARTED:
                 # update params
                 pass
             
-            # if learning_regen_text is stopping this frame...
-            if learning_regen_text.status == STARTED:
+            # if learning_text_regen is stopping this frame...
+            if learning_text_regen.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > learning_regen_text.tStartRefresh + 10-frameTolerance:
+                if tThisFlipGlobal > learning_text_regen.tStartRefresh + 10-frameTolerance:
                     # keep track of stop time/frame for later
-                    learning_regen_text.tStop = t  # not accounting for scr refresh
-                    learning_regen_text.frameNStop = frameN  # exact frame index
+                    learning_text_regen.tStop = t  # not accounting for scr refresh
+                    learning_text_regen.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'learning_regen_text.stopped')
+                    thisExp.timestampOnFlip(win, 'learning_text_regen.stopped')
                     # update status
-                    learning_regen_text.status = FINISHED
-                    learning_regen_text.setAutoDraw(False)
+                    learning_text_regen.status = FINISHED
+                    learning_text_regen.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
