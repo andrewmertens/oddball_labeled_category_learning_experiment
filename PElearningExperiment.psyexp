@@ -204,7 +204,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeLearn2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="learn_ori_val" valType="num" updates="set every repeat" name="ori"/>
@@ -403,7 +403,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeLearn" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="learn_ori_val" valType="num" updates="set every repeat" name="ori"/>
@@ -644,7 +644,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeDemo1" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="41" valType="num" updates="constant" name="ori"/>
@@ -808,7 +808,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeDemo1_2" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="41" valType="num" updates="constant" name="ori"/>
@@ -2754,7 +2754,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeDemo2" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="41" valType="num" updates="constant" name="ori"/>
@@ -3135,7 +3135,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeDemoLL" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="78.75" valType="num" updates="constant" name="ori"/>
@@ -3190,7 +3190,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeDemoL" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="78.75" valType="num" updates="constant" name="ori"/>
@@ -3245,7 +3245,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeDemoR" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="-11.25" valType="num" updates="constant" name="ori"/>
@@ -3300,7 +3300,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeDemoRR" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="-11.25" valType="num" updates="constant" name="ori"/>
@@ -3934,7 +3934,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="gauss" valType="file" updates="constant" name="mask"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
         <Param val="alienEyeLearn3" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="learn_ori_val" valType="num" updates="set every repeat" name="ori"/>
@@ -4036,6 +4036,21 @@
       </PolygonComponent>
     </Routine>
     <Routine name="learning_blink">
+      <RoutineSettingsComponent name="learning_blink" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="learning_blink" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
       <CodeComponent name="backmask_noise_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
@@ -4053,21 +4068,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="backmask_noise_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <RoutineSettingsComponent name="learning_blink" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="learning_blink" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
       <TextComponent name="learn_trialNum_5" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -5007,7 +5007,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val=".1" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>
@@ -5184,7 +5184,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val=".1" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>

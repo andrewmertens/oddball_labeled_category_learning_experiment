@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 11, 2025, at 15:36
+    on April 12, 2025, at 15:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -211,7 +211,7 @@ alienBodyDemoLL = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-1.0)
 alienEyeDemoLL = visual.GratingStim(
     win=win, name='alienEyeDemoLL',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=78.75, pos=(-.45, -.2), size=[eyeSize, eyeSize], sf=7.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -226,7 +226,7 @@ alienBodyDemoL = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-3.0)
 alienEyeDemoL = visual.GratingStim(
     win=win, name='alienEyeDemoL',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=78.75, pos=(-.15, -.2), size=[eyeSize, eyeSize], sf=11.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -241,7 +241,7 @@ alienBodyDemoR = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-5.0)
 alienEyeDemoR = visual.GratingStim(
     win=win, name='alienEyeDemoR',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=-11.25, pos=(.15, -.2), size=[eyeSize, eyeSize], sf=7.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -256,7 +256,7 @@ alienBodyDemoRR = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-7.0)
 alienEyeDemoRR = visual.GratingStim(
     win=win, name='alienEyeDemoRR',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=-11.25, pos=(.45, -.2), size=[eyeSize, eyeSize], sf=11.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -301,7 +301,7 @@ alienBodyDemo1 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-1.0)
 alienEyeDemo1 = visual.GratingStim(
     win=win, name='alienEyeDemo1',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=41.0, pos=(.45, .1), size=[eyeSize, eyeSize], sf=10.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -340,7 +340,7 @@ alienBodyDemo1_2 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 alienEyeDemo1_2 = visual.GratingStim(
     win=win, name='alienEyeDemo1_2',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=41.0, pos=(.45, .1), size=[eyeSize, eyeSize], sf=10.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -585,7 +585,7 @@ if not learn_stim_trigs.is_open:
     learn_stim_trigs.open()
 alienEyeLearn = visual.GratingStim(
     win=win, name='alienEyeLearn',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -652,7 +652,7 @@ alienBodyLearn2 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-4.0)
 alienEyeLearn2 = visual.GratingStim(
     win=win, name='alienEyeLearn2',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
     color=[1,1,1], colorSpace='rgb',
     opacity=None, contrast=0.5, blendmode='avg',
@@ -705,7 +705,7 @@ alienBodyLearn3 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-4.0)
 alienEyeLearn3 = visual.GratingStim(
     win=win, name='alienEyeLearn3',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
     color=[1,1,1], colorSpace='rgb',
     opacity=None, contrast=0.5, blendmode='avg',
@@ -841,7 +841,7 @@ alienBodyDemo2 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-1.0)
 alienEyeDemo2 = visual.GratingStim(
     win=win, name='alienEyeDemo2',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=41.0, pos=(.45, .1), size=[eyeSize, eyeSize], sf=10.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -937,7 +937,7 @@ if not learn_stim_trigs.is_open:
     learn_stim_trigs.open()
 alienEyeLearn = visual.GratingStim(
     win=win, name='alienEyeLearn',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
     color=[1, 1, 1], colorSpace='rgb',
     opacity=1.0, contrast=0.5, blendmode='avg',
@@ -1004,7 +1004,7 @@ alienBodyLearn2 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-4.0)
 alienEyeLearn2 = visual.GratingStim(
     win=win, name='alienEyeLearn2',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
     color=[1,1,1], colorSpace='rgb',
     opacity=None, contrast=0.5, blendmode='avg',
@@ -1057,7 +1057,7 @@ alienBodyLearn3 = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-4.0)
 alienEyeLearn3 = visual.GratingStim(
     win=win, name='alienEyeLearn3',
-    tex='sin', mask='gauss', anchor='center',
+    tex='sin', mask='circle', anchor='center',
     ori=1.0, pos=(0, .1), size=[eyeSize, eyeSize], sf=1.0, phase=0.0,
     color=[1,1,1], colorSpace='rgb',
     opacity=None, contrast=0.5, blendmode='avg',
@@ -1164,13 +1164,13 @@ learn2_break1_text = visual.TextStim(win=win, name='learn2_break1_text',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
-learning2_break1_keys = keyboard.Keyboard()
+learn2_break1_keys = keyboard.Keyboard()
 
-# point learning2_break1_trigs to device at port 'COM4' and make sure it's open
-learning2_break1_trigs = serialCom4
-learning2_break1_trigs.status = NOT_STARTED
-if not learning2_break1_trigs.is_open:
-    learning2_break1_trigs.open()
+# point learn2_break1_trigs to device at port 'COM4' and make sure it's open
+learn2_break1_trigs = serialCom4
+learn2_break1_trigs.status = NOT_STARTED
+if not learn2_break1_trigs.is_open:
+    learn2_break1_trigs.open()
 
 # --- Initialize components for Routine "learning2_break2" ---
 learn2_break2_text = visual.TextStim(win=win, name='learn2_break2_text',
@@ -1548,7 +1548,7 @@ frameN = -1
 
 # --- Run Routine "resting_closed" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 30.0:
+while continueRoutine and routineTimer.getTime() < 1.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1579,7 +1579,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_closed_photobox_pre is stopping this frame...
     if resting_closed_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 30-frameTolerance:
+        if tThisFlipGlobal > resting_closed_photobox_pre.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_closed_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1606,7 +1606,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_closed_trigs_pre is stopping this frame...
     if resting_closed_trigs_pre.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > 29.9-frameTolerance:
+        if tThisFlip > 0.9-frameTolerance:
             # keep track of stop time/frame for later
             resting_closed_trigs_pre.tStop = t  # not accounting for scr refresh
             resting_closed_trigs_pre.frameNStop = frameN  # exact frame index
@@ -1643,7 +1643,7 @@ for thisComponent in resting_closedComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-30.000000)
+    routineTimer.addTime(-1.000000)
 
 # --- Prepare to start Routine "resting_instructions_2" ---
 continueRoutine = True
@@ -1802,7 +1802,7 @@ frameN = -1
 
 # --- Run Routine "resting_open" ---
 routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 30.0:
+while continueRoutine and routineTimer.getTime() < 1.0:
     # get current time
     t = routineTimer.getTime()
     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1833,7 +1833,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_open_photobox_pre is stopping this frame...
     if resting_open_photobox_pre.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 30-frameTolerance:
+        if tThisFlipGlobal > resting_open_photobox_pre.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_photobox_pre.tStop = t  # not accounting for scr refresh
             resting_open_photobox_pre.frameNStop = frameN  # exact frame index
@@ -1860,7 +1860,7 @@ while continueRoutine and routineTimer.getTime() < 30.0:
     # if resting_open_trigs is stopping this frame...
     if resting_open_trigs.status == STARTED:
         # is it time to stop? (based on local clock)
-        if tThisFlip > 29.9-frameTolerance:
+        if tThisFlip > 0.9-frameTolerance:
             # keep track of stop time/frame for later
             resting_open_trigs.tStop = t  # not accounting for scr refresh
             resting_open_trigs.frameNStop = frameN  # exact frame index
@@ -1897,7 +1897,7 @@ for thisComponent in resting_openComponents:
 if routineForceEnded:
     routineTimer.reset()
 else:
-    routineTimer.addTime(-30.000000)
+    routineTimer.addTime(-1.000000)
 
 # --- Prepare to start Routine "learning_instructions0" ---
 continueRoutine = True
@@ -5386,7 +5386,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
         waitOnFlip = False
         
         # if learn1_break1_keys is starting this frame...
-        if learn1_break1_keys.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if learn1_break1_keys.status == NOT_STARTED and tThisFlip >= .1-frameTolerance:
             # keep track of start time/frame for later
             learn1_break1_keys.frameNStart = frameN  # exact frame index
             learn1_break1_keys.tStart = t  # local t and not account for scr refresh
@@ -7545,11 +7545,11 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
     health_modifier = health_score/full_health_score
     
     learn2_break1_trig = learning2_oddcond_loop.thisN + 20
-    learning2_break1_keys.keys = []
-    learning2_break1_keys.rt = []
-    _learning2_break1_keys_allKeys = []
+    learn2_break1_keys.keys = []
+    learn2_break1_keys.rt = []
+    _learn2_break1_keys_allKeys = []
     # keep track of which components have finished
-    learning2_break1Components = [learn2_break1_text, learning2_break1_keys, learning2_break1_trigs]
+    learning2_break1Components = [learn2_break1_text, learn2_break1_keys, learn2_break1_trigs]
     for thisComponent in learning2_break1Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -7592,59 +7592,59 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             # update params
             pass
         
-        # *learning2_break1_keys* updates
+        # *learn2_break1_keys* updates
         waitOnFlip = False
         
-        # if learning2_break1_keys is starting this frame...
-        if learning2_break1_keys.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # if learn2_break1_keys is starting this frame...
+        if learn2_break1_keys.status == NOT_STARTED and tThisFlip >= .1-frameTolerance:
             # keep track of start time/frame for later
-            learning2_break1_keys.frameNStart = frameN  # exact frame index
-            learning2_break1_keys.tStart = t  # local t and not account for scr refresh
-            learning2_break1_keys.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(learning2_break1_keys, 'tStartRefresh')  # time at next scr refresh
+            learn2_break1_keys.frameNStart = frameN  # exact frame index
+            learn2_break1_keys.tStart = t  # local t and not account for scr refresh
+            learn2_break1_keys.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(learn2_break1_keys, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'learning2_break1_keys.started')
+            thisExp.timestampOnFlip(win, 'learn2_break1_keys.started')
             # update status
-            learning2_break1_keys.status = STARTED
+            learn2_break1_keys.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
-            win.callOnFlip(learning2_break1_keys.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(learning2_break1_keys.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if learning2_break1_keys.status == STARTED and not waitOnFlip:
-            theseKeys = learning2_break1_keys.getKeys(keyList=['space'], waitRelease=False)
-            _learning2_break1_keys_allKeys.extend(theseKeys)
-            if len(_learning2_break1_keys_allKeys):
-                learning2_break1_keys.keys = _learning2_break1_keys_allKeys[-1].name  # just the last key pressed
-                learning2_break1_keys.rt = _learning2_break1_keys_allKeys[-1].rt
+            win.callOnFlip(learn2_break1_keys.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(learn2_break1_keys.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if learn2_break1_keys.status == STARTED and not waitOnFlip:
+            theseKeys = learn2_break1_keys.getKeys(keyList=['space'], waitRelease=False)
+            _learn2_break1_keys_allKeys.extend(theseKeys)
+            if len(_learn2_break1_keys_allKeys):
+                learn2_break1_keys.keys = _learn2_break1_keys_allKeys[-1].name  # just the last key pressed
+                learn2_break1_keys.rt = _learn2_break1_keys_allKeys[-1].rt
                 # a response ends the routine
                 continueRoutine = False
         
-        # if learning2_break1_trigs is starting this frame...
-        if learning2_break1_trigs.status == NOT_STARTED and tThisFlip >= .1-frameTolerance:
+        # if learn2_break1_trigs is starting this frame...
+        if learn2_break1_trigs.status == NOT_STARTED and tThisFlip >= .1-frameTolerance:
             # keep track of start time/frame for later
-            learning2_break1_trigs.frameNStart = frameN  # exact frame index
-            learning2_break1_trigs.tStart = t  # local t and not account for scr refresh
-            learning2_break1_trigs.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(learning2_break1_trigs, 'tStartRefresh')  # time at next scr refresh
+            learn2_break1_trigs.frameNStart = frameN  # exact frame index
+            learn2_break1_trigs.tStart = t  # local t and not account for scr refresh
+            learn2_break1_trigs.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(learn2_break1_trigs, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'learning2_break1_trigs.started')
+            thisExp.timestampOnFlip(win, 'learn2_break1_trigs.started')
             # update status
-            learning2_break1_trigs.status = STARTED
-            win.callOnFlip(learning2_break1_trigs.write, bytes(chr(learn2_break1_trig), 'utf8'))
-            learning2_break1_trigs.status = STARTED
+            learn2_break1_trigs.status = STARTED
+            win.callOnFlip(learn2_break1_trigs.write, bytes(chr(learn2_break1_trig), 'utf8'))
+            learn2_break1_trigs.status = STARTED
         
-        # if learning2_break1_trigs is stopping this frame...
-        if learning2_break1_trigs.status == STARTED:
+        # if learn2_break1_trigs is stopping this frame...
+        if learn2_break1_trigs.status == STARTED:
             if bool(len(_learn2_break1_keys_allKeys)):
                 # keep track of stop time/frame for later
-                learning2_break1_trigs.tStop = t  # not accounting for scr refresh
-                learning2_break1_trigs.frameNStop = frameN  # exact frame index
+                learn2_break1_trigs.tStop = t  # not accounting for scr refresh
+                learn2_break1_trigs.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'learning2_break1_trigs.stopped')
+                thisExp.timestampOnFlip(win, 'learn2_break1_trigs.stopped')
                 # update status
-                learning2_break1_trigs.status = FINISHED
-                win.callOnFlip(learning2_break1_trigs.write, bytes(chr(learn2_break1_trig), 'utf8'))
-                learning2_break1_trigs.status = FINISHED
+                learn2_break1_trigs.status = FINISHED
+                win.callOnFlip(learn2_break1_trigs.write, bytes(chr(learn2_break1_trig), 'utf8'))
+                learn2_break1_trigs.status = FINISHED
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -7669,11 +7669,11 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # check responses
-    if learning2_break1_keys.keys in ['', [], None]:  # No response was made
-        learning2_break1_keys.keys = None
-    learning2_oddcond_loop.addData('learning2_break1_keys.keys',learning2_break1_keys.keys)
-    if learning2_break1_keys.keys != None:  # we had a response
-        learning2_oddcond_loop.addData('learning2_break1_keys.rt', learning2_break1_keys.rt)
+    if learn2_break1_keys.keys in ['', [], None]:  # No response was made
+        learn2_break1_keys.keys = None
+    learning2_oddcond_loop.addData('learn2_break1_keys.keys',learn2_break1_keys.keys)
+    if learn2_break1_keys.keys != None:  # we had a response
+        learning2_oddcond_loop.addData('learn2_break1_keys.rt', learn2_break1_keys.rt)
     # the Routine "learning2_break1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -8794,9 +8794,9 @@ if learn_label_trigs.is_open:
 # Close learn_blink_trigs
 if learn_blink_trigs.is_open:
     learn_blink_trigs.close()
-# Close learning2_break1_trigs
-if learning2_break1_trigs.is_open:
-    learning2_break1_trigs.close()
+# Close learn2_break1_trigs
+if learn2_break1_trigs.is_open:
+    learn2_break1_trigs.close()
 # Close resting_closed_trigs_post
 if resting_closed_trigs_post.is_open:
     resting_closed_trigs_post.close()
