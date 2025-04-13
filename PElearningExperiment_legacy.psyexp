@@ -107,27 +107,6 @@
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
         <Param val="1" valType="num" updates="constant" name="volume"/>
       </SoundComponent>
-      <SerialOutComponent name="learn_feedback_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_feedback_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(170)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="feedbackSoundLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(learn_acc_trig)" valType="str" updates="None" name="stopdata"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
       <TextComponent name="learn_trialNum_3" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -343,27 +322,6 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <SerialOutComponent name="learn_stim_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_stim_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="alienBodyLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(learn_ontrig)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_learn_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(learn_offtrig)" valType="str" updates="None" name="stopdata"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
       <GratingComponent name="alienEyeLearn" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="avg" valType="str" updates="constant" name="blendmode"/>
@@ -689,27 +647,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn_instruction_trigs_1" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_instruction_trigs_1" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionLearn1.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_learn_1_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning_instructions2">
       <ImageComponent name="alienBodyDemo1_2" plugin="None">
@@ -838,27 +775,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn_instruction_trigs_2" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_instruction_trigs_2" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionLearn_2.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_learn_2_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning_instructions3">
       <TextComponent name="instructionLearn_3" plugin="None">
@@ -905,27 +821,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="False" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn_instruction_trigs_3" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_instruction_trigs_3" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionLearn_3.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_learn_3_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="feedbackDemoSetup">
       <CodeComponent name="code_2" plugin="None">
@@ -984,7 +879,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Thank you so much for your hard work today. In the next and final section, questions about your experience today will appear at the top of the screen on each page. Please type your answer to each question and press the Enter (or Return) key to go to the next page. There are a total of 4 questions to answer. Press the spacebar to continue." valType="str" updates="constant" name="text"/>
+        <Param val="That concludes the experiment! Thank you so much for your hard work today. In the next and final section, questions about your experience today will appear at the top of the screen on each page. Please type your answer to each question and press the Enter (or Return) key to go to the next page. There are a total of 4 questions to answer. Press the spacebar to continue." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -1007,27 +902,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="exit_instruction_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="exit_instruction_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionExit.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(9)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_exit_1_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(10)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="exit_questionnaire">
       <CodeComponent name="exitResponseTextCODE" plugin="None">
@@ -1181,45 +1055,8 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="exit_question_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="exit_question_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="exitQuestion.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(181)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_exit_2_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(182)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="experiment_end">
-      <SoundComponent name="end_chime" plugin="None">
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="hamming"/>
-        <Param val="end_chime" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="stimuli/ding.wav" valType="str" updates="constant" name="sound"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="2" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-        <Param val="1" valType="num" updates="constant" name="volume"/>
-      </SoundComponent>
       <TextComponent name="thank_you" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -1239,12 +1076,31 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="You are done! An experimenter will be in momentarily to remove the cap. Thank you for your time!" valType="str" updates="constant" name="text"/>
+        <Param val="Thank you for participating in our project on language and categorization. In the project you just took part in, we are exploring how language affects the categorization of objects. As one of the conditions of the experiment, you may or may not have seen labels in conjunction with the aliens you saw in this experiment. We are examining the effect of these labels on categorization. &amp;#10;Previous research has shown that both written and verbal labels aid in category learning. This study aims to determine whether labels cause this effect by making differences between features of members of different categories more distinct while making differences between members of the same category less distinct.&amp;#10;If you have any questions or concerns about the project, please contact Andrew Mertens by email at Andrew.mertens@colorado.edu (you can also find this email on the SONA page for this experiment).&amp;#10;Please press the spacebar when you are done reading this page to conclude the experiment." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
+      <KeyboardComponent name="experiment_end_key_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="experiment_end_key_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
     </Routine>
     <Routine name="same_diff">
       <CodeComponent name="sd_end_display" plugin="None">
@@ -1578,27 +1434,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn_instruction_trigs_4" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_instruction_trigs_4" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionLearn4a.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_learn_4_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning_instructions5">
       <SoundComponent name="incorrect_tone_instructions" plugin="None">
@@ -1667,27 +1502,6 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <SerialOutComponent name="learn_instruction_trigs_5" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_instruction_trigs_5" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionLearn5a.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="instructionLearn5a.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning_label_instructions">
       <CodeComponent name="labelONLYinstructionsCODE" plugin="None">
@@ -1751,27 +1565,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn_label_instruction_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_label_instruction_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="learning_label_instruction_text.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_label_instructions_key_resp_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning_instructions6">
       <TextComponent name="instructionLearn6" plugin="None">
@@ -1795,7 +1588,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="You are now ready to begin training! There will be two sessions to the training, each of which will be followed by an additional session of the task you completed previously (i.e., determining whether pairs of aliens are identical or not). The counter at the top will indicate your progress in the current session. Press the spacebar when you are prepared to start." valType="str" updates="constant" name="text"/>
+        <Param val="You are now ready to begin training! This task is divided into 10 sessions, after each of which you will be given a choice to take a short break. The counter at the top will indicate your progress in the current session. Try to respond as quickly and accurately as possible. Press the spacebar when you are prepared to start." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -1818,27 +1611,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn_instruction_trigs_6" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_instruction_trigs_6" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionLearn6.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_learn_6_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="sd_instructions1">
       <CodeComponent name="stimSize" plugin="None">
@@ -2574,27 +2346,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn2_instruction_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn2_instruction_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionLearn2.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(19)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_learning2_keyboard_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(19)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="sd2_instructions">
       <TextComponent name="sd2_instruction_text" plugin="None">
@@ -2774,6 +2525,23 @@
       </SerialOutComponent>
     </Routine>
     <Routine name="learning_instructions0">
+      <CodeComponent name="stim_setup" plugin="None">
+        <Param val="alienH = .4&amp;#10;alienW = .2686&amp;#10;&amp;#10;eyeSize = .11&amp;#10;&amp;#10;explH = .1233&amp;#10;explW = .1&amp;#10;&amp;#10;textH = .04&amp;#10;fixationH = .1&amp;#10;&amp;#10;healthbarH = .4&amp;#10;healthbarW = .06&amp;#10;healthbarPosH = -.4&amp;#10;healthbarPosV = -.2&amp;#10;&amp;#10;&amp;#10;alien_body_file = 'stimuli/alienBody6.png'&amp;#10;&amp;#10;full_health_score = 20 #starting hp&amp;#10;health_score = full_health_score&amp;#10;health_modifier = 1 #starting modifier (full health)" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="alienH = 0.4;&amp;#10;alienW = 0.2686;&amp;#10;eyeSize = 0.11;&amp;#10;explH = 0.1233;&amp;#10;explW = 0.1;&amp;#10;textH = 0.04;&amp;#10;fixationH = 0.1;&amp;#10;healthbarH = 0.4;&amp;#10;healthbarW = 0.06;&amp;#10;healthbarPosH = (- 0.4);&amp;#10;healthbarPosV = (- 0.2);&amp;#10;alien_body_file = &quot;stimuli/alienBody6.png&quot;;&amp;#10;full_health_score = 20;&amp;#10;health_score = full_health_score;&amp;#10;health_modifier = 1;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="stim_setup" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <TextComponent name="instructionLearn0" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -3038,27 +2806,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn_instruction_trigs_0" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_instruction_trigs_0" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="instructionLearn0.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(7)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_learn_0_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(8)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="sd_blink">
       <CodeComponent name="sd_blink_code" plugin="None">
@@ -3367,27 +3114,6 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <SerialOutComponent name="learn_fix_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_fix_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="fixationLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(177)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="fixationLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(178)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
       <PolygonComponent name="health_border_1" plugin="None">
         <Param val="bottom-left" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -3477,27 +3203,6 @@
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
         <Param val="label_vol" valType="num" updates="set every repeat" name="volume"/>
       </SoundComponent>
-      <SerialOutComponent name="learn_label_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_label_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="trainingLabelLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(173)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="trainingLabelLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(label_trig)" valType="str" updates="None" name="stopdata"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
       <TextComponent name="learn_trialNum_4" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -3655,197 +3360,6 @@
         <Param val="trainingLabelLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="trainingLabelLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="list" updates="constant" name="vertices"/>
-      </PolygonComponent>
-    </Routine>
-    <Routine name="learning_blink">
-      <CodeComponent name="backmask_noise_code" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="noiseTexture = ((np.random.rand(128, 128) * 2.0) - 1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="noiseTexture = ((np.random.rand(128, 128) * 2.0) - 1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="backmask_noise_code" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-      <TextComponent name="learn_trialNum_5" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="textH" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="learn_trialNum_5" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, .4)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$learn_trial_nums" valType="str" updates="set every repeat" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <TextComponent name="learning_blink_text" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="textH" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="learning_blink_text" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -.1)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="You can blink now!&amp;#10;Press the spacebar to continue." valType="str" updates="constant" name="text"/>
-        <Param val="height" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <GratingComponent name="noise_backmask" plugin="None">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="avg" valType="str" updates="constant" name="blendmode"/>
-        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val=".5" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="circle" valType="file" updates="constant" name="mask"/>
-        <Param val="noise_backmask" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="0.0" valType="num" updates="constant" name="phase"/>
-        <Param val="(0, .1)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val=".5" valType="num" updates="set every repeat" name="sf"/>
-        <Param val="[eyeSize, eyeSize]" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$noiseTexture" valType="file" updates="set every frame" name="tex"/>
-        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-      </GratingComponent>
-      <KeyboardComponent name="learning_blink_key" plugin="None">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
-        <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="learning_blink_key" valType="code" updates="None" name="name"/>
-        <Param val="press" valType="str" updates="constant" name="registerOn"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val=".5" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="last key" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
-      <SerialOutComponent name="learn_blink_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_blink_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(179)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_learning_blink_key_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(180)" valType="str" updates="None" name="stopdata"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
-      <PolygonComponent name="health_border_5" plugin="None">
-        <Param val="bottom-left" valType="str" updates="constant" name="anchor"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="0.0000, 0.0000, 0.0000" valType="color" updates="constant" name="fillColor"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="0.3961, -0.7333, -0.7333" valType="color" updates="constant" name="lineColor"/>
-        <Param val="4" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="4" valType="int" updates="constant" name="nVertices"/>
-        <Param val="health_border_5" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="list" updates="constant" name="vertices"/>
-      </PolygonComponent>
-      <PolygonComponent name="health_fill_5" plugin="None">
-        <Param val="bottom-left" valType="str" updates="constant" name="anchor"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="0.3961, -0.7333, -0.7333" valType="color" updates="constant" name="fillColor"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="0.0000, 0.0000, 0.0000" valType="color" updates="constant" name="lineColor"/>
-        <Param val="0" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="4" valType="int" updates="constant" name="nVertices"/>
-        <Param val="health_fill_5" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
@@ -4436,7 +3950,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Would you like to take a break before proceeding? If so, stay on this screen. Let the experimenter know if you need anything (they should be able to hear you through the microphone in the room).&amp;#10;&amp;#10;When you would like to proceed, press the spacebar." valType="str" updates="constant" name="text"/>
+        <Param val="Would you like to take a break before proceeding? If so, stay on this screen. &amp;#10;&amp;#10;When you would like to proceed, press the spacebar." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -4459,27 +3973,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn1_break1_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn1_break1_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val=".1" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(learn1_break1_trig)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_learn1_break1_keys_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(learn1_break1_trig)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning1_break2">
       <CodeComponent name="skip_learn1_break2_code" plugin="None">
@@ -4583,7 +4076,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Would you like to take a break before proceeding? If so, stay on this screen. Let the experimenter know if you need anything (they should be able to hear you through the microphone in the room).&amp;#10;&amp;#10;When you would like to proceed, press the spacebar." valType="str" updates="constant" name="text"/>
+        <Param val="Would you like to take a break before proceeding? If so, stay on this screen. &amp;#10;&amp;#10;When you would like to proceed, press the spacebar." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -4606,27 +4099,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <SerialOutComponent name="learn2_break1_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn2_break1_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val=".1" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(learn2_break1_trig)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_learn2_break1_keys_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(learn2_break1_trig)" valType="str" updates="None" name="stopdata"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
     </Routine>
     <Routine name="learning2_break2">
       <CodeComponent name="skip_learn2_break2_code" plugin="None">
@@ -5231,13 +4703,134 @@
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
     </Routine>
+    <Routine name="learning_backmask">
+      <CodeComponent name="backmask_noise_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="noiseTexture = ((np.random.rand(128, 128) * 2.0) - 1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="noiseTexture = ((np.random.rand(128, 128) * 2.0) - 1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="backmask_noise_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="learn_trialNum_5" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="textH" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="learn_trialNum_5" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, .4)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$learn_trial_nums" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <GratingComponent name="noise_backmask" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="avg" valType="str" updates="constant" name="blendmode"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val=".5" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
+        <Param val="noise_backmask" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0.0" valType="num" updates="constant" name="phase"/>
+        <Param val="(0, .1)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".5" valType="num" updates="set every repeat" name="sf"/>
+        <Param val="[eyeSize, eyeSize]" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$noiseTexture" valType="file" updates="set every frame" name="tex"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+      </GratingComponent>
+      <PolygonComponent name="health_border_5" plugin="None">
+        <Param val="bottom-left" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="0.0000, 0.0000, 0.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="0.3961, -0.7333, -0.7333" valType="color" updates="constant" name="lineColor"/>
+        <Param val="4" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="health_border_5" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="rectangle" valType="str" updates="None" name="shape"/>
+        <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <PolygonComponent name="health_fill_5" plugin="None">
+        <Param val="bottom-left" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="0.3961, -0.7333, -0.7333" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="0.0000, 0.0000, 0.0000" valType="color" updates="constant" name="lineColor"/>
+        <Param val="0" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="health_fill_5" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="rectangle" valType="str" updates="None" name="shape"/>
+        <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+    </Routine>
   </Routines>
   <Flow>
-    <Routine name="record_reminder"/>
-    <Routine name="resting_instructions_1"/>
-    <Routine name="resting_closed"/>
-    <Routine name="resting_instructions_2"/>
-    <Routine name="resting_open"/>
     <Routine name="learning_instructions0"/>
     <Routine name="learning_instructions1"/>
     <Routine name="learning_instructions2"/>
@@ -5275,13 +4868,11 @@
     <Routine name="learning_feedback"/>
     <Routine name="learning_feedback_label"/>
     <Routine name="learning_regen"/>
-    <Routine name="learning_blink"/>
+    <Routine name="learning_backmask"/>
     <LoopTerminator name="learning1_block_loop"/>
     <Routine name="learning1_break1"/>
-    <Routine name="learning1_break2"/>
     <LoopTerminator name="learning1_oddcond_loop"/>
     <Routine name="learning2_instructions"/>
-    <Routine name="learning2_break0"/>
     <LoopInitiator loopType="TrialHandler" name="learning2_oddcond_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
@@ -5309,15 +4900,10 @@
     <Routine name="learning_feedback"/>
     <Routine name="learning_feedback_label"/>
     <Routine name="learning_regen"/>
-    <Routine name="learning_blink"/>
+    <Routine name="learning_backmask"/>
     <LoopTerminator name="learning2_block_loop"/>
     <Routine name="learning2_break1"/>
-    <Routine name="learning2_break2"/>
     <LoopTerminator name="learning2_oddcond_loop"/>
-    <Routine name="resting_instructions_3"/>
-    <Routine name="resting_closed_post"/>
-    <Routine name="resting_instructions_4"/>
-    <Routine name="resting_open_post"/>
     <Routine name="exit_instructions"/>
     <LoopInitiator loopType="TrialHandler" name="exitQ_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
