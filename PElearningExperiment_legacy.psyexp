@@ -77,8 +77,8 @@
       <CodeComponent name="learningFeedbackCODE" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="health_modifier = 1 #starting modifier (full health)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="health_modifier = 1;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="if (key_resp_learn.corr) {&amp;#10;    feedback_tone = &quot;stimuli/bleep.wav&quot;;&amp;#10;    learn_acc_trig = 172;&amp;#10;} else {&amp;#10;    feedback_tone = &quot;stimuli/buzz.wav&quot;;&amp;#10;    learn_acc_trig = 171;&amp;#10;    health_score = (health_score - 1);&amp;#10;}&amp;#10;health_modifier = (health_score / full_health_score);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="if key_resp_learn.corr:&amp;#10;  feedback_tone = 'stimuli/bleep.wav'&amp;#10;  learn_acc_trig = 172&amp;#10;else:&amp;#10;  feedback_tone = 'stimuli/buzz.wav'&amp;#10;  learn_acc_trig = 171&amp;#10;  health_score = health_score - 1 #hp reduction&amp;#10;&amp;#10;#multiplied by the height param of the health_fill poly to represent proportional health&amp;#10;health_modifier = health_score/full_health_score #proportional health based on current hp" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -984,7 +984,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Thank you so much for your hard work today. In the next and final section, questions about your experience today will appear at the top of the screen on each page. Please type your answer to each question and press the Enter (or Return) key to go to the next page. There are a total of 4 questions to answer. Press the spacebar to continue." valType="str" updates="constant" name="text"/>
+        <Param val="Thank you so much for your hard work today. In the next and final section, questions about your experience today will appear at the top of the screen on each page. Please type your answer to each question and press the Enter (or Return) key to go to the next page. There are a total of 5 questions to answer. Press the spacebar to continue." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -1795,7 +1795,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="You are now ready to begin training! There will be two sessions to the training, each of which will be followed by an additional session of the task you completed previously (i.e., determining whether pairs of aliens are identical or not). The counter at the top will indicate your progress in the current session. Press the spacebar when you are prepared to start." valType="str" updates="constant" name="text"/>
+        <Param val="You are now ready to begin training! This task is divided into 10 sections after each of which you will be given the option to take a short break. The counter at the top will indicate your progress in the current section. Try to respond as quickly and accurately as possible. Press the spacebar when you are prepared to start." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -3661,22 +3661,22 @@
       </PolygonComponent>
     </Routine>
     <Routine name="learning_blink">
-      <CodeComponent name="backmask_noise_code" plugin="None">
+      <CodeComponent name="learn_blink_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="noiseTexture = ((np.random.rand(128, 128) * 2.0) - 1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="blink_counter = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="blink_counter = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((learning1_block_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;blink_counter = (blink_counter + 1);&amp;#10;if ((blink_counter === 4)) {&amp;#10;    blink_counter = 0;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if learning1_block_loop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;blink_counter = blink_counter + 1&amp;#10;if blink_counter == 4:&amp;#10;    blink_counter = 0&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="noiseTexture = ((np.random.rand(128, 128) * 2.0) - 1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="backmask_noise_code" valType="code" updates="None" name="name"/>
+        <Param val="learn_blink_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="learn_trialNum_5" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
@@ -3728,34 +3728,6 @@
         <Param val="height" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <GratingComponent name="noise_backmask" plugin="None">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="avg" valType="str" updates="constant" name="blendmode"/>
-        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val=".5" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="circle" valType="file" updates="constant" name="mask"/>
-        <Param val="noise_backmask" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="0.0" valType="num" updates="constant" name="phase"/>
-        <Param val="(0, .1)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val=".5" valType="num" updates="set every repeat" name="sf"/>
-        <Param val="[eyeSize, eyeSize]" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$noiseTexture" valType="file" updates="set every frame" name="tex"/>
-        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-      </GratingComponent>
       <KeyboardComponent name="learning_blink_key" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
@@ -3768,7 +3740,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val=".5" valType="code" updates="None" name="startVal"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>
@@ -4336,8 +4308,8 @@
     </Routine>
     <Routine name="record_reminder">
       <CodeComponent name="stim_setup" plugin="None">
-        <Param val="alienH = .4&amp;#10;alienW = .2686&amp;#10;&amp;#10;eyeSize = .11&amp;#10;&amp;#10;explH = .1233&amp;#10;explW = .1&amp;#10;&amp;#10;textH = .04&amp;#10;fixationH = .1&amp;#10;&amp;#10;healthbarH = .4&amp;#10;healthbarW = .06&amp;#10;healthbarPosH = -.4&amp;#10;healthbarPosV = -.2&amp;#10;&amp;#10;&amp;#10;alien_body_file = 'stimuli/alienBody6.png'&amp;#10;&amp;#10;full_health_score = 20 #starting hp&amp;#10;health_score = full_health_score&amp;#10;health_modifier = 1 #starting modifier (full health)" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="alienH = 0.4;&amp;#10;alienW = 0.2686;&amp;#10;eyeSize = 0.11;&amp;#10;explH = 0.1233;&amp;#10;explW = 0.1;&amp;#10;textH = 0.04;&amp;#10;fixationH = 0.1;&amp;#10;healthbarH = 0.4;&amp;#10;healthbarW = 0.06;&amp;#10;healthbarPosH = (- 0.4);&amp;#10;healthbarPosV = (- 0.2);&amp;#10;alien_body_file = &quot;stimuli/alienBody6.png&quot;;&amp;#10;full_health_score = 20;&amp;#10;health_score = full_health_score;&amp;#10;health_modifier = 1;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="alienH = .4&amp;#10;alienW = .2686&amp;#10;&amp;#10;eyeSize = .11&amp;#10;&amp;#10;explH = .1233&amp;#10;explW = .1&amp;#10;&amp;#10;textH = .04&amp;#10;fixationH = .1&amp;#10;&amp;#10;healthbarH = .4&amp;#10;healthbarW = .06&amp;#10;healthbarPosH = -.4&amp;#10;healthbarPosV = -.2&amp;#10;&amp;#10;&amp;#10;alien_body_file = 'stimuli/alienBody6.png'&amp;#10;&amp;#10;full_health_score = 20 #starting hp&amp;#10;health_score = full_health_score&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="alienH = 0.4;&amp;#10;alienW = 0.2686;&amp;#10;eyeSize = 0.11;&amp;#10;explH = 0.1233;&amp;#10;explW = 0.1;&amp;#10;textH = 0.04;&amp;#10;fixationH = 0.1;&amp;#10;healthbarH = 0.4;&amp;#10;healthbarW = 0.06;&amp;#10;healthbarPosH = (- 0.4);&amp;#10;healthbarPosV = (- 0.2);&amp;#10;alien_body_file = &quot;stimuli/alienBody6.png&quot;;&amp;#10;full_health_score = 20;&amp;#10;health_score = full_health_score;&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
@@ -5231,6 +5203,132 @@
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
     </Routine>
+    <Routine name="learning_backmask">
+      <CodeComponent name="backmask_noise_code_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="noiseTexture = ((np.random.rand(128, 128) * 2.0) - 1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="noiseTexture = np.random.rand(128, 128) * 2.0 - 1.0" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="noiseTexture = ((np.random.rand(128, 128) * 2.0) - 1.0);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="backmask_noise_code_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="learn_trialNum" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="textH" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="learn_trialNum" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, .4)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$learn_trial_nums" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <GratingComponent name="noise_backmask_2" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="avg" valType="str" updates="constant" name="blendmode"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val=".5" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="circle" valType="file" updates="constant" name="mask"/>
+        <Param val="noise_backmask_2" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0.0" valType="num" updates="constant" name="phase"/>
+        <Param val="(0, .1)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".5" valType="num" updates="set every repeat" name="sf"/>
+        <Param val="[eyeSize, eyeSize]" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$noiseTexture" valType="file" updates="set every frame" name="tex"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+      </GratingComponent>
+      <PolygonComponent name="health_border" plugin="None">
+        <Param val="bottom-left" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="0.0000, 0.0000, 0.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="0.3961, -0.7333, -0.7333" valType="color" updates="constant" name="lineColor"/>
+        <Param val="4" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="health_border" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="rectangle" valType="str" updates="None" name="shape"/>
+        <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <PolygonComponent name="health_fill" plugin="None">
+        <Param val="bottom-left" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="0.3961, -0.7333, -0.7333" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="0.0000, 0.0000, 0.0000" valType="color" updates="constant" name="lineColor"/>
+        <Param val="0" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="health_fill" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(healthbarPosH, healthbarPosV)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="rectangle" valType="str" updates="None" name="shape"/>
+        <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="record_reminder"/>
@@ -5274,6 +5372,7 @@
     <Routine name="learning_presentation"/>
     <Routine name="learning_feedback"/>
     <Routine name="learning_feedback_label"/>
+    <Routine name="learning_backmask"/>
     <Routine name="learning_regen"/>
     <Routine name="learning_blink"/>
     <LoopTerminator name="learning1_block_loop"/>
