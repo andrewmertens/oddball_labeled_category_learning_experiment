@@ -100,7 +100,7 @@
         <Param val="$feedback_tone" valType="str" updates="set every repeat" name="sound"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="0.1" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val=".25" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -343,27 +343,6 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <SerialOutComponent name="learn_stim_trigs" plugin="None">
-        <Param val="9600" valType="int" updates="None" name="baudrate"/>
-        <Param val="8" valType="int" updates="None" name="bytesize"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="None" name="getResponse"/>
-        <Param val="learn_stim_trigs" valType="code" updates="None" name="name"/>
-        <Param val="O" valType="str" updates="None" name="parity"/>
-        <Param val="COM4" valType="str" updates="None" name="port"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="alienBodyLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="$chr(learn_ontrig)" valType="str" updates="None" name="startdata"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="len(_key_resp_learn_allKeys)" valType="code" updates="constant" name="stopVal"/>
-        <Param val="1" valType="int" updates="None" name="stopbits"/>
-        <Param val="$chr(learn_offtrig)" valType="str" updates="None" name="stopdata"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="" valType="int" updates="None" name="timeout"/>
-      </SerialOutComponent>
       <GratingComponent name="alienEyeLearn" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="avg" valType="str" updates="constant" name="blendmode"/>
@@ -419,6 +398,46 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </ImageComponent>
+      <KeyboardComponent name="key_resp_learn" plugin="None">
+        <Param val="learn_legal_keys" valType="list" updates="set every repeat" name="allowedKeys"/>
+        <Param val="$learn_correct_key" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_learn" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="explorerLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <SerialOutComponent name="learn_stim_trigs" plugin="None">
+        <Param val="9600" valType="int" updates="None" name="baudrate"/>
+        <Param val="8" valType="int" updates="None" name="bytesize"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="None" name="getResponse"/>
+        <Param val="learn_stim_trigs" valType="code" updates="None" name="name"/>
+        <Param val="O" valType="str" updates="None" name="parity"/>
+        <Param val="COM4" valType="str" updates="None" name="port"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="alienBodyLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="$chr(learn_ontrig)" valType="str" updates="None" name="startdata"/>
+        <Param val="condition" valType="str" updates="None" name="stopType"/>
+        <Param val="len(_key_resp_learn_allKeys)" valType="code" updates="constant" name="stopVal"/>
+        <Param val="1" valType="int" updates="None" name="stopbits"/>
+        <Param val="$chr(learn_offtrig)" valType="str" updates="None" name="stopdata"/>
+        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="int" updates="None" name="timeout"/>
+      </SerialOutComponent>
       <PolygonComponent name="learn_photo_box" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -446,25 +465,6 @@
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <KeyboardComponent name="key_resp_learn" plugin="None">
-        <Param val="learn_legal_keys" valType="list" updates="set every repeat" name="allowedKeys"/>
-        <Param val="$learn_correct_key" valType="str" updates="constant" name="correctAns"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="key_resp_learn" valType="code" updates="None" name="name"/>
-        <Param val="press" valType="str" updates="constant" name="registerOn"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="explorerLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="last key" valType="str" updates="constant" name="store"/>
-        <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
       <PolygonComponent name="health_border_2" plugin="None">
         <Param val="bottom-left" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -3666,8 +3666,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="blink_counter = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="blink_counter = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((learning1_block_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;blink_counter = (blink_counter + 1);&amp;#10;if ((blink_counter === 4)) {&amp;#10;    blink_counter = 0;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if learning1_block_loop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;blink_counter = blink_counter + 1&amp;#10;if blink_counter == 4:&amp;#10;    blink_counter = 0&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((currentLoop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;blink_counter = (blink_counter + 1);&amp;#10;if ((blink_counter === 4)) {&amp;#10;    blink_counter = 0;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if currentLoop.nRemaining == 0:&amp;#10;    continueRoutine=False&amp;#10;blink_counter = blink_counter + 1&amp;#10;if blink_counter == 4:&amp;#10;    blink_counter = 0&amp;#10;else:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -4408,7 +4408,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Would you like to take a break before proceeding? If so, stay on this screen. Let the experimenter know if you need anything (they should be able to hear you through the microphone in the room).&amp;#10;&amp;#10;When you would like to proceed, press the spacebar." valType="str" updates="constant" name="text"/>
+        <Param val="Would you like to take a longer break before proceeding? If so, stay on this screen. Let the experimenter know if you need anything (they should be able to hear you through the microphone in the room).&amp;#10;&amp;#10;When you would like to proceed, press the spacebar." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -4454,23 +4454,6 @@
       </SerialOutComponent>
     </Routine>
     <Routine name="learning1_break2">
-      <CodeComponent name="skip_learn1_break2_code" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((learning1_oddcond_loop.nRemaining === 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if learning1_oddcond_loop.nRemaining == 0:&amp;#10;    continueRoutine=False" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="skip_learn1_break2_code" valType="code" updates="None" name="name"/>
-      </CodeComponent>
       <TextComponent name="learn1_break2_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -4492,7 +4475,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="The experimenter will now check to make sure your readings look good on their end. If everything is in order, they will progress you to the next screen. Otherwise, they may come in and make adjustments to the equipment momentarily." valType="str" updates="constant" name="text"/>
+        <Param val="The experimenters will now check to make sure your readings look good on their end. If everything is in order, they will progress you to the next screen, where you will be able to take a longer break if you like. Otherwise, they may come in and make adjustments to the equipment momentarily." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -4555,7 +4538,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Would you like to take a break before proceeding? If so, stay on this screen. Let the experimenter know if you need anything (they should be able to hear you through the microphone in the room).&amp;#10;&amp;#10;When you would like to proceed, press the spacebar." valType="str" updates="constant" name="text"/>
+        <Param val="Would you like to take a longer break before proceeding? If so, stay on this screen. Let the experimenter know if you need anything (they should be able to hear you through the microphone in the room).&amp;#10;&amp;#10;When you would like to proceed, press the spacebar." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -4639,7 +4622,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="The experimenter will now check to make sure your readings look good on their end. If everything is in order, they will progress you to the next screen. Otherwise, they may come in and make adjustments to the equipment momentarily." valType="str" updates="constant" name="text"/>
+        <Param val="The experimenters will now check to make sure your readings look good on their end. If everything is in order, they will progress you to the next screen, where you will be able to take a longer break if you like. Otherwise, they may come in and make adjustments to the equipment momentarily." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -5376,11 +5359,10 @@
     <Routine name="learning_regen"/>
     <Routine name="learning_blink"/>
     <LoopTerminator name="learning1_block_loop"/>
-    <Routine name="learning1_break1"/>
     <Routine name="learning1_break2"/>
+    <Routine name="learning1_break1"/>
     <LoopTerminator name="learning1_oddcond_loop"/>
     <Routine name="learning2_instructions"/>
-    <Routine name="learning2_break0"/>
     <LoopInitiator loopType="TrialHandler" name="learning2_oddcond_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
@@ -5407,11 +5389,12 @@
     <Routine name="learning_presentation"/>
     <Routine name="learning_feedback"/>
     <Routine name="learning_feedback_label"/>
+    <Routine name="learning_backmask"/>
     <Routine name="learning_regen"/>
     <Routine name="learning_blink"/>
     <LoopTerminator name="learning2_block_loop"/>
-    <Routine name="learning2_break1"/>
     <Routine name="learning2_break2"/>
+    <Routine name="learning2_break1"/>
     <LoopTerminator name="learning2_oddcond_loop"/>
     <Routine name="resting_instructions_3"/>
     <Routine name="resting_closed_post"/>
