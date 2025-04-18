@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.0),
-    on April 17, 2025, at 21:56
+    on April 17, 2025, at 22:05
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -4382,7 +4382,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             # *learn_trialNum_3* updates
             
             # if learn_trialNum_3 is starting this frame...
-            if learn_trialNum_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if learn_trialNum_3.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 learn_trialNum_3.frameNStart = frameN  # exact frame index
                 learn_trialNum_3.tStart = t  # local t and not account for scr refresh
@@ -4414,7 +4414,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             # *alienBodyLearn2* updates
             
             # if alienBodyLearn2 is starting this frame...
-            if alienBodyLearn2.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if alienBodyLearn2.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 alienBodyLearn2.frameNStart = frameN  # exact frame index
                 alienBodyLearn2.tStart = t  # local t and not account for scr refresh
@@ -4446,7 +4446,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             # *alienEyeLearn2* updates
             
             # if alienEyeLearn2 is starting this frame...
-            if alienEyeLearn2.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if alienEyeLearn2.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 alienEyeLearn2.frameNStart = frameN  # exact frame index
                 alienEyeLearn2.tStart = t  # local t and not account for scr refresh
@@ -4478,7 +4478,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             # *explorerLearn2* updates
             
             # if explorerLearn2 is starting this frame...
-            if explorerLearn2.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if explorerLearn2.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 explorerLearn2.frameNStart = frameN  # exact frame index
                 explorerLearn2.tStart = t  # local t and not account for scr refresh
@@ -4510,7 +4510,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             # *health_border_3* updates
             
             # if health_border_3 is starting this frame...
-            if health_border_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if health_border_3.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 health_border_3.frameNStart = frameN  # exact frame index
                 health_border_3.tStart = t  # local t and not account for scr refresh
@@ -4542,7 +4542,7 @@ for thisLearning1_oddcond_loop in learning1_oddcond_loop:
             # *health_fill_3* updates
             
             # if health_fill_3 is starting this frame...
-            if health_fill_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if health_fill_3.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 health_fill_3.frameNStart = frameN  # exact frame index
                 health_fill_3.tStart = t  # local t and not account for scr refresh
@@ -6645,7 +6645,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             # *learn_trialNum_3* updates
             
             # if learn_trialNum_3 is starting this frame...
-            if learn_trialNum_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if learn_trialNum_3.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 learn_trialNum_3.frameNStart = frameN  # exact frame index
                 learn_trialNum_3.tStart = t  # local t and not account for scr refresh
@@ -6677,7 +6677,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             # *alienBodyLearn2* updates
             
             # if alienBodyLearn2 is starting this frame...
-            if alienBodyLearn2.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if alienBodyLearn2.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 alienBodyLearn2.frameNStart = frameN  # exact frame index
                 alienBodyLearn2.tStart = t  # local t and not account for scr refresh
@@ -6709,7 +6709,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             # *alienEyeLearn2* updates
             
             # if alienEyeLearn2 is starting this frame...
-            if alienEyeLearn2.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if alienEyeLearn2.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 alienEyeLearn2.frameNStart = frameN  # exact frame index
                 alienEyeLearn2.tStart = t  # local t and not account for scr refresh
@@ -6741,7 +6741,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             # *explorerLearn2* updates
             
             # if explorerLearn2 is starting this frame...
-            if explorerLearn2.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if explorerLearn2.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 explorerLearn2.frameNStart = frameN  # exact frame index
                 explorerLearn2.tStart = t  # local t and not account for scr refresh
@@ -6773,7 +6773,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             # *health_border_3* updates
             
             # if health_border_3 is starting this frame...
-            if health_border_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if health_border_3.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 health_border_3.frameNStart = frameN  # exact frame index
                 health_border_3.tStart = t  # local t and not account for scr refresh
@@ -6805,7 +6805,7 @@ for thisLearning2_oddcond_loop in learning2_oddcond_loop:
             # *health_fill_3* updates
             
             # if health_fill_3 is starting this frame...
-            if health_fill_3.status == NOT_STARTED and feedbackSoundLearn.status == STARTED:
+            if health_fill_3.status == NOT_STARTED and frameN >= 0:
                 # keep track of start time/frame for later
                 health_fill_3.frameNStart = frameN  # exact frame index
                 health_fill_3.tStart = t  # local t and not account for scr refresh

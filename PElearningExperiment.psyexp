@@ -159,8 +159,8 @@
         <Param val="(0, .4)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="feedbackSoundLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -187,8 +187,8 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="[alienW, alienH]" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="feedbackSoundLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -214,8 +214,8 @@
         <Param val="learn_freq_val" valType="num" updates="set every repeat" name="sf"/>
         <Param val="[eyeSize, eyeSize]" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="feedbackSoundLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -242,8 +242,8 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="[explW, explH]" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="feedbackSoundLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -269,8 +269,8 @@
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
         <Param val="(healthbarW, healthbarH)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="feedbackSoundLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -296,8 +296,8 @@
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
         <Param val="(healthbarW, (healthbarH*health_modifier))" valType="list" updates="set every repeat" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="feedbackSoundLearn.status == STARTED" valType="code" updates="None" name="startVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="feedbackSoundLearn.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
